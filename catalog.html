@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Academy: Нёрдс</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="header__logo">
+            Нёрдс
+        </h1>
+        <nav class="header__nav">
+            <ul class="header__nav_list">
+
+            <li class="nav__item">
+                <a href="#">Информация</a>
+            </li>
+
+            <li class="nav__item">
+                <a href="#">Новости</a>
+            </li>
+
+            <li class="nav__item">
+                <a href="#">Прайс-Лист</a>
+            </li>
+
+            <li class="nav__item">
+                <a href="catalog.html">Магазин</a>
+            </li>
+
+            <li class="nav__item">
+                <a href="#">Контакты</a>
+            </li>
+
+            </ul>
+        </nav>
+
+        <button class="button__login">Корзина</button>
+        <h1 class="catalog__title">
+            Магазин готовых шаблонов
+        </h1>
+    </header>
+    <aside class="catalog__filter">
+        <form action="" method="post" class="filter">
+            <h2 class="filter__title">Фильтр товаров</h2>
+            <fieldset class="filter__group">
+                <legend class="filter__group_title">Стоимость</legend>
+
+                <input type="range" name="range1" id="range1" value="0" min="0" max="10000" step="1" onchange ="document.querySelector(`#rangeValue1`).value = this.value" >
+                <input type="range" name="range2" id="range2" value="15000" min="10000" max="20000" step="1" onchange ="document.querySelector(`#rangeValue2`).value = this.value" >
+
+                <label for="rangeValue1">От: </label>
+                <input type="text" id="rangeValue1" onchange ="document.querySelector(`#range1`).value = this.value">
+
+                <label for="rangeValue2">До: </label>
+                <input type="text" id="rangeValue2" value="15000" onchange ="document.querySelector(`#range2`).value = this.value">
+            </fieldset>
+
+            <fieldset class="filter__group">
+                <legend class="filter__group_title">Сетка: </legend>
+
+                <input type="radio" name="radio" id="radio-adaptive">
+                <label for="radio-adaptive">Адаптивная</label>
+
+                <input type="radio" name="radio" id="radio-fixed">
+                <label for="radio-fixed">Фиксированная</label>
+
+                <input type="radio" name="radio" id="radio-rubber">
+                <label for="radio-rubber">Резиновая</label>
+            </fieldset>
+
+            <fieldset class="filter__group">
+                <legend class="filter__group_title">Особенности: </legend>
+
+                <input type="checkbox" name="check-slider" id="check-slider">
+                <label for="check-slider">Слайдер</label>
+
+                <input type="checkbox" name="check-advantages" id="check-advantages">
+                <label for="check-advantages">Блок преимуществ</label>
+
+                <input type="checkbox" name="check-news" id="check-news">
+                <label for="check-news">Новости</label>
+
+                <input type="checkbox" name="check-gallery" id="check-gallery">
+                <label for="check-gallery">Галерея</label>
+
+                <input type="checkbox" name="check-basket" id="check-basket">
+                <label for="check-basket">Корзина</label>
+            </fieldset>
+
+            <input class="filter__button" type="submit" value="Показать">
+
+        </form>
+    </aside>
+    <main class="catalog__main">
+        <header class="catalog__main_sort">
+            <form class="sort">
+                <h2 class="sort__title">
+                    Сортировать: 
+                </h2>
+                <fieldset class="sort__group">
+                    <input type="radio" name="sort-radio" id="price">
+                    <label for="price">По цене</label>
+    
+                    <input type="radio" name="sort-radio" id="type">
+                    <label for="type">По типу</label>
+    
+                    <input type="radio" name="sort-radio" id="name">
+                    <label for="name">По названию</label>
+                </fieldset>
+                <fieldset class="sort__group">
+                    <label for="price-min">Меньше</label>
+                    <input type="radio" name="sort-radioPrice" id="price-min">
+                    <label for="price-max">Больше</label>
+                    <input type="radio" name="sort-radioPrice" id="price-max">
+    
+                    <label for="type-min">Меньше</label>
+                    <input type="radio" name="sort-radioPrice" id="type-min">
+                    <label for="type-max">Больше</label>
+                    <input type="radio" name="sort-radioPrice" id="type-max">
+    
+                    <label for="name-min">А-Я</label>
+                    <input type="radio" name="sort-radioPrice" id="name-min">
+                    <label for="name-max">Я-А</label>
+                    <input type="radio" name="sort-radioPrice" id="name-max">
+                </fieldset>
+            </form>
+            
+        </header>
+        <section class="catalog__main_products">
+            <ul class="products__list">
+                <li class="products__list_item">
+                    <div class="product">
+                        <h3 class="product__title">Sedona</h3>
+                        <p class="product__description">
+                            Информационный сайт для туристов
+                        </p>
+                        <button class="product__button">9 900 руб.</button>
+                    </div>
+                </li>
+                <li class="products__list_item">
+                    <div class="product">
+                        <h3 class="product__title">Название товара</h3>
+                        <p class="product__description">
+                            Информационный сайт для туристов
+                        </p>
+                        <button class="product__button">9 900 руб.</button>
+                    </div>
+                </li>
+                <li class="products__list_item">
+                    <div class="product">
+                        <h3 class="product__title">Название товара</h3>
+                        <p class="product__description">
+                            Информационный сайт для туристов
+                        </p>
+                        <button class="product__button">9 900 руб.</button>
+                    </div>
+                </li>
+                <li class="products__list_item">
+                    <div class="product">
+                        <h3 class="product__title">Название товара</h3>
+                        <p class="product__description">
+                            Информационный сайт для туристов
+                        </p>
+                        <button class="product__button">9 900 руб.</button>
+                    </div>
+                </li>
+                <li class="products__list_item">
+                    <div class="product">
+                        <h3 class="product__title">Название товара</h3>
+                        <p class="product__description">
+                            Информационный сайт для туристов
+                        </p>
+                        <button class="product__button">9 900 руб.</button>
+                    </div>
+                </li>
+                <li class="products__list_item">
+                    <div class="product">
+                        <h3 class="product__title">Название товара</h3>
+                        <p class="product__description">
+                            Информационный сайт для туристов
+                        </p>
+                        <button class="product__button">9 900 руб.</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <footer class="catalog__main_navigation">
+            <a href="" class="navigation__page">1</a>
+            <a href="" class="navigation__page">2</a>
+            <a href="" class="navigation__page">3</a>
+            <a href="" class="navigation__page">Следующая</a>
+
+        </footer>
+    </main>
+    
+    <footer class="footer">
+        <section class="footer__contact">
+            <div class="footer__contact_information">
+                <h2 class="information__title">Nerds design studio</h2>
+                <p class="information__addr">
+                    текст адреса
+                </p>
+                <p class="information__tel">
+                    тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+                </p>
+                <button class="information__button">Напишите нам</button>
+            </div>
+            <iframe class="footer__contact_map" src="" frameborder="0"></iframe>
+        </section>
+        <section class="footer__social">
+            <ul class="footer__social_list">
+                <li class="social__item">
+                <a class="social__item_button" href="http://" target="_blank" rel="noopener noreferrer">Вконтакте</a>
+                </li>
+
+                <li class="social__item">
+                <a class="social__item_button" href="http://" target="_blank" rel="noopener noreferrer">Фейсбук</a>
+                </li>
+
+                <li class="social__item">
+                <a class="social__item_button" href="http://" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </li>
+            </ul>
+
+            <p class="footer__social_text">
+                Давайте дружить, это выгодно!<br>
+                <span>Скидка 10% для друзей из социальных сетей.</span>
+            </p>
+        </section>
+        
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="js/main.js"></script>
+    <script>
+        window.onload = function() {
+            document.querySelector(`#rangeValue1`).value = document.querySelector(`#range1`).value;
+            document.querySelector(`#rangeValue2`).value = document.querySelector(`#range2`).value;
+        }
+    </script>
+    </body>
+    </html>
