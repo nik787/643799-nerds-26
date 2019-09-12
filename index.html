@@ -2,150 +2,195 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Нёрдс</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
   <header class="header">
-    <h1 class="header-logo">
-      Нёрдс
-    </h1>
-    <nav class="header-nav">
-      <ul class="header-nav__list">
+    <img src="" alt="Нёрдс" class="header__logo">
 
-        <li class="header-nav__list-item">
+    <nav class="header__nav">
+      <ul class="header__nav_list">
+
+        <li class="nav__item">
           <a href="#">Информация</a>
         </li>
 
-        <li class="header-nav__list-item">
+        <li class="nav__item">
           <a href="#">Новости</a>
         </li>
 
-        <li class="header-nav__list-item">
+        <li class="nav__item">
           <a href="#">Прайс-Лист</a>
         </li>
 
-        <li class="header-nav__list-item">
+        <li class="nav__item">
           <a href="catalog.html">Магазин</a>
         </li>
 
-        <li class="header-nav__list-item">
+        <li class="nav__item">
           <a href="#">Контакты</a>
         </li>
 
       </ul>
     </nav>
 
-    <button class="btn button-login">Вход</button>
+    <a href="#" class="button__basket">Корзина</a>
 
   </header>
 
   <main class="main">
 
     <section class="slider">
-      <h2 class="slider-title">
+      <h2 class="slider__title">
         Долго, дорого,  скрупулезно.
       </h2>
-      <p class="sslider-text">
-        Математически выверенный дизайн <br>
+      <p class="sslider__text">
+        Математически выверенный дизайн  
         для вашего сайта или мобильного приложения.
       </p>
-      <a href="#" class="btn slider-btn">Узнать больше</a>
+      <a href="#" class="slider__btn">Узнать больше</a>
     </section>
 
     <section class="advantages">
-
-      <ul class="advantages-list">
-        <li class="advantages-list__item">
-          <article class="advantages-item">
+      <h2 class="advantages__title">Наши преимущества</h2>
+      <ul class="advantages__list">
+        <li class="advantages__list_item">
+          <article class="advantages__item">
             <img src="img/advantages-1.png" alt="Вебсайты">
-            <h3 class="advantages-item_title">Веб-сайты</h3>
-            <p class="advantages-item_text">
-              Мир никогда не будет прежним <br>
+            <h3 class="advantages__item_title">Веб-сайты</h3>
+            <p class="advantages__item_text">
+              Мир никогда не будет прежним  
               после того как увидит ваш сайт!
             </p>
-            <button class="btn advantages-button">Заказать</button>
+             <a href="#" class="advantages__button">Заказать</a>
           </article>
         </li>
 
-        <li class="advantages-list__item">
-          <article class="advantages-item">
+        <li class="advantages__list_item">
+          <article class="advantages__item">
             <img src="img/advantages-2.png" alt="Приложения">
-            <h3 class="advantages-item_title">Приложения</h3>
-            <p class="advantages-item_text">
-              Покорите топ-10 приложений в <br>
+            <h3 class="advantages__item_title">Приложения</h3>
+            <p class="advantages__item_text">
+              Покорите топ-10 приложений в  
               AppStore и Google Play
             </p>
-            <button class="btn advantages-button">Заказать</button>
+             <a href="#" class="advantages__button">Заказать</a>
           </article>
         </li>
 
-        <li class="advantages-list__item">
-          <article class="advantages-item">
+        <li class="advantages__list_item">
+          <article class="advantages__item">
             <img src="img/advantages-3.png" alt="Презентации">
-            <h3 class="advantages-item_title">Презентации</h3>
-            <p class="advantages-item_text">
-              Вы даже не подозреваете, <br>
+            <h3 class="advantages__item_title">Презентации</h3>
+            <p class="advantages__item_text">
+              Вы даже не подозреваете,  
               насколько вы изумительны!
             </p>
-            <button class="btn advantages-button">Заказать</button>
+             <a href="#" class="advantages__button">Заказать</a>
           </article>
         </li>
       </ul>
-<!-- Дальше по заданию не требуется -->
-    <!-- </section>
+
+    </section>
 
     <section class="studio">
 
-      <h2 class="studio-title">О нас</h2>
+      <h2 class="studio__title">О нас</h2>
 
-      <p class="studio-text_main">
-        Мы — маленькая, но гордая <br>
+      <p class="studio__text_main">
+        Мы — маленькая, но гордая  
         дизайн-студия из Краснодара. 
       </p>
 
-      <p class="studio-text_secondary">
-        Исповедуем принципы минимализма и чистоты. Ставим математический расчет <br>
+      <p class="studio__text_secondary">
+        Исповедуем принципы минимализма и чистоты. Ставим математический расчет  
         превыше креатива. Работаем не покладая рук, как роботы.
       </p>
 
-      <dl class="studio-list">
-        <dt>Выполняем заказы на разработку:</dt>
-        <dd>Веб-сайтов любой сложности</dd>
-        <dd>Мобильных приложений для iOS и Android</dd>
-        <dd>Слайдшоу и видео для корпоративных презентаций</dd>
-      </dl>
+      <p class="studio__list_title">
+        Выполняем заказы на разработку:
+      </p>
+      <ul class="studio__list">
+        <li>Веб-сайтов любой сложности</li>
+        <li>Мобильных приложений для iOS и Android</li>
+        <li>Слайдшоу и видео для корпоративных презентаций</li>
+      </ul>
 
+      <div class="studio__logo">
+        <img src="" alt="Нердс">
+      </div>
+      <span class="studio__list_title">C 2004 года любим точность во всем</span>
+      <ul class="studio__list">
+        <li class="studio__list_item">
+          <p>
+            146<sup>%</sup> 
+            <span>Уровень самоотдачи</span>
+          </p>
+        </li>
+        <li class="studio__list_item">
+          <p>
+            100<sup>%</sup> 
+            <span>Соблюдение сроков</span>
+          </p>
+        </li>
+        <li class="studio__list_item">
+          <p>
+            50<sup>%</sup> 
+            <span>Минимальная предоплата</span>
+          </p>
+        </li>
+      </ul>
     </section>
-    Дальше по заданию не требуется -->
+    <section>
+      <ul>
+        <li>Html Academy</li>
+        <li>Borodinski</li>
+        <li>Pink</li>
+        <li>Mishka</li>
+      </ul>
+    </section>
   </main>
 
   <footer class="footer">
+    <h2 class="footer__title">Контактная информация</h2>
+      <section class="footer__contact">
+        <div class="footer__contact_information">
+            <h3 class="information__title">Nerds design studio</h3>
+            <p class="information__addr">
+              текст адреса
+            </p>
+            <p class="information__tel">
+              тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+            </p>
+            <a href="#" class="information__button">Напишите нам</a>
+        </div>
+        <iframe class="footer__contact_map" src="" frameborder="0"></iframe>
+      </section>
+      <section class="footer__social">
+        <h3 class="footer__social_title">Наши социальные сети</h3>
 
-    <div class="footer-social">
-      <ul class="footer-social__list">
-        <li class="footer-social__list-item">
-          <a class="btn button-social" href="http://" target="_blank" rel="noopener noreferrer">Вконтакте</a>
-        </li>
+        <ul class="footer__social_list">
+          <li class="social__item">
+          <a class="social__item_button" href="http://" target="_blank">Вконтакте</a>
+          </li>
 
-        <li class="footer-social__list-item">
-          <a class="btn button-social" href="http://" target="_blank" rel="noopener noreferrer">Фейсбук</a>
-        </li>
+          <li class="social__item">
+          <a class="social__item_button" href="http://" target="_blank">Фейсбук</a>
+          </li>
 
-        <li class="footer-social__list-item">
-          <a class="btn button-social" href="http://" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </li>
-      </ul>
+          <li class="social__item">
+          <a class="social__item_button" href="http://" target="_blank">Instagram</a>
+          </li>
+        </ul>
 
-      <p class="footer-social__text">
-        Давайте дружить, это выгодно!<br>
-        <span>Скидка 10% для друзей из социальных сетей.</span>
-      </p>
-    </div>
-    
+        <p class="footer__social_text">
+          Давайте дружить, это выгодно! 
+          <span>Скидка 10% для друзей из социальных сетей.</span>
+        </p>
+      </section>
+      
   </footer>
 
   <!-- Скрипты -->
