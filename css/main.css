@@ -1,0 +1,10 @@
+.partner {
+  opacity: .2;
+}
+.partner:hover,
+.partner:focus {
+  opacity: 1;
+}
+.partner:active {
+  opacity: .1;
+}
