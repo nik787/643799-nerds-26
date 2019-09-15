@@ -1,11 +1,14 @@
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
           center: [59.938631, 30.323055],
-          zoom: 16,
-          controls: ['typeSelector'],
+          zoom: 17,
+          controls: [],
           type: 'yandex#map'
       }, {
           searchControlProvider: 'yandex#search'
+      },
+      {
+        suppressMapOpenBlock: true,
       }),
 
       // Создаём макет содержимого.
@@ -14,8 +17,8 @@ ymaps.ready(function () {
       ),
 
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Собственный значок метки',
-          balloonContent: 'Это красивая метка'
+          hintContent: `191186, Санкт-Петербург,
+          ул. Б. Конюшенная, д. 19/8`
       }, {
           // Опции.
           // Необходимо указать данный тип макета.
@@ -26,7 +29,7 @@ ymaps.ready(function () {
           iconImageSize: [231, 190],
           // Смещение левого верхнего угла иконки относительно
           // её "ножки" (точки привязки).
-          iconImageOffset: [-50, -190]
+          iconImageOffset: [-50, -200]
       })
 
   myMap.geoObjects
