@@ -8,7 +8,8 @@
   <body>
 
     <header class="header">
-      <img src="img/nerds-logo.svg" alt="Нёрдс" width="160" height="65" class="header__logo">
+      <img class="header__logo" src="img/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
+
       <nav class="header__nav">
         <ul class="header__nav_list">
 
@@ -35,7 +36,7 @@
         </ul>
       </nav>
 
-      <a href="#" class="button__basket">Корзина</a>
+      <a class="header__button" href="#">Корзина</a>
 
       <h1 class="catalog__title">
         Магазин готовых шаблонов
@@ -48,13 +49,13 @@
           <legend class="filter__group_title">Стоимость</legend>
           <ul class="filter__group_list">
             <li class="filter__group_item">
-              <input type="range" name="range1" id="range1" value="0" min="0" max="10000" step="1">
-              <input type="range" name="range2" id="range2" value="15000" min="10000" max="20000" step="1">
+              <input id="range1" type="range" name="range1" value="0" min="0" max="10000" step="1">
+              <input id="range2" type="range" name="range2" value="15000" min="10000" max="20000" step="1">
               <label for="rangeValue1">От: </label>
-              <input type="text" id="rangeValue1">
+              <input id="rangeValue1" type="text">
 
               <label for="rangeValue2">До: </label>
-              <input type="text" id="rangeValue2" value="15000">
+              <input id="rangeValue2" type="text" value="15000">
             </li>
           </ul>
         </fieldset>
@@ -64,17 +65,17 @@
 
           <ul class="filter__group_list">
             <li class="filter__group_item">
-              <input type="radio" name="radio" id="radio-adaptive">
+              <input id="radio-adaptive" type="radio" name="radio">
               <label for="radio-adaptive">Адаптивная</label>
             </li>
 
             <li class="filter__group_item">
-              <input type="radio" name="radio" id="radio-fixed">
+              <input id="radio-fixed" type="radio" name="radio">
               <label for="radio-fixed">Фиксированная</label>
             </li>
 
             <li class="filter__group_item">
-              <input type="radio" name="radio" id="radio-rubber">
+              <input id="radio-rubber" type="radio" name="radio">
               <label for="radio-rubber">Резиновая</label>
             </li>
           </ul>
@@ -85,33 +86,33 @@
 
           <ul class="filter__group_list">
             <li class="filter__group_item">
-              <input type="checkbox" name="check-slider" id="check-slider">
+              <input id="check-slider" type="checkbox" name="check-slider">
               <label for="check-slider">Слайдер</label>
             </li>
 
             <li class="filter__group_item">
-              <input type="checkbox" name="check-advantages" id="check-advantages">
+              <input id="check-advantages" type="checkbox" name="check-advantages">
               <label for="check-advantages">Блок преимуществ</label>
             </li>
 
             <li class="filter__group_item">
-              <input type="checkbox" name="check-news" id="check-news">
+              <input id="check-news" type="checkbox" name="check-news">
               <label for="check-news">Новости</label>
             </li>
 
             <li class="filter__group_item">
-              <input type="checkbox" name="check-gallery" id="check-gallery">
+              <input id="check-gallery" type="checkbox" name="check-gallery">
               <label for="check-gallery">Галерея</label>
             </li>
 
             <li class="filter__group_item">
-              <input type="checkbox" name="check-basket" id="check-basket">
+              <input id="check-basket" type="checkbox" name="check-basket">
               <label for="check-basket">Корзина</label>
             </li>
           </ul>
         </fieldset>
 
-        <button type="submit" class="filter__button">Показать</button>
+        <button class="filter__button" type="submit">Показать</button>
 
       </form>
     </aside>
@@ -123,19 +124,19 @@
 
         <ul class="sort__group">
           <li class="sort__group_item">
-            <a href="" class="sort__item">По цене</a>
+            <a class="sort__item" href="">По цене</a>
           </li>
 
           <li class="sort__group_item">
-            <a href="" class="sort__item">По типу</a>
+            <a class="sort__item" href="">По типу</a>
           </li>
 
           <li class="sort__group_item">
-            <a href="" class="sort__item">По названию</a>
+            <a class="sort__item" href="">По названию</a>
           </li>
         </ul>
-        <a href="#" class="sort__range" aria-label="Меньше">&#9660;</a>
-        <a href="#" class="sort__range" aria-label="Больше">&#9650;</a>
+        <a class="sort__range" href="#" aria-label="Меньше">&#9660;</a>
+        <a class="sort__range" href="#" aria-label="Больше">&#9650;</a>
       </header>
       <section class="catalog__main_products">
         <ul class="products__list">
@@ -147,7 +148,7 @@
               <p class="product__description">
                 Информационный сайт для туристов
               </p>
-              <a href="#" class="product__button">9 900 руб.</a>
+              <a class="product__button" href="#">9 900 руб.</a>
             </div>
           </li>
           <li class="products__list_item">
@@ -159,7 +160,7 @@
                 Продуктовый лендинг
                 приложения для iOS и Android
               </p>
-              <a href="#" class="product__button">9 900 руб.</a>
+              <a class="product__button" href="#">9 900 руб.</a>
             </div>
           </li>
           <li class="products__list_item">
@@ -170,7 +171,7 @@
               <p class="product__description">
                 Сайт салона красоты. Для мужчин, да.
               </p>
-              <a href="#" class="product__button">9 900 руб.</a>
+              <a class="product__button" href="#">9 900 руб.</a>
             </div>
           </li>
           <li class="products__list_item">
@@ -182,7 +183,7 @@
                 Интернет-магазин
                 вязаных игрушек
               </p>
-              <a href="#" class="product__button">9 900 руб.</a>
+              <a class="product__button" href="#">9 900 руб.</a>
             </div>
           </li>
           <li class="products__list_item">
@@ -193,7 +194,7 @@
               <p class="product__description">
                 Лендинг курсов повышения квалификации
               </p>
-              <a href="#" class="product__button">9 900 руб.</a>
+              <a class="product__button" href="#">9 900 руб.</a>
             </div>
           </li>
           <li class="products__list_item">
@@ -205,7 +206,7 @@
               Промо-сайт производителя
               крафтового кваса
               </p>
-              <a href="#" class="product__button">9 900 руб.</a>
+              <a class="product__button" href="#">9 900 руб.</a>
             </div>
           </li>
         </ul>
@@ -213,16 +214,16 @@
       <footer class="catalog__main_navigation">
         <ul class="navigation">
           <li class="navigation__item">
-            <a href="" class="navigation__item_link" aria-label="Переход на страницу №1">1</a>
+            <a class="navigation__item_link" href="" aria-label="Переход на страницу №1">1</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__item_link" aria-label="Переход на страницу №2">2</a>
+            <a class="navigation__item_link" href="" aria-label="Переход на страницу №2">2</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__item_link" aria-label="Переход на страницу №2">3</a>
+            <a class="navigation__item_link" href="" aria-label="Переход на страницу №2">3</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__item_link" aria-label="Переход на следующую страницу">Следующая</a>
+            <a class="navigation__item_link" href="" aria-label="Переход на следующую страницу">Следующая</a>
           </li>
         </ul>
       </footer>
@@ -240,7 +241,7 @@
               <p class="information__tel">
                 тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
               </p>
-              <a href="#" class="information__button">Напишите нам</a>
+              <a class="information__button" href="#">Напишите нам</a>
           </div>
           <div id="map" style="width: 100%; height: 416px"></div>
         </section>
@@ -269,28 +270,28 @@
 
     </footer>
 
-  <!-- Попапы -->
+    <!-- Попапы -->
 
     <section class="popup">
       <h2 class="popup__title">
         Напишите нам
       </h2>
       <form class="popup__form" action="" method="post">
-        <label for="name" class="popup__form_label">
+        <label class="popup__form_label" for="name">
           Ваше имя:
         </label>
-        <input type="text" name="name" id="name" class="popup__form_imput" placeholder="Имя Фамилия">
+        <input class="popup__form_imput" type="text" name="name" id="name" placeholder="Имя Фамилия">
 
-        <label for="email" class="popup__form_label">
+        <label class="popup__form_label" for="email">
           Ваш e-mail:
         </label>
-        <input type="email" name="email" id="email" class="popup__form_imput" placeholder="email@example.com">
+        <input class="popup__form_imput" type="email" name="email" id="email" placeholder="email@example.com">
 
-        <label for="text-area">Текст письма:</label>
-        <textarea name="text-area" id="text-area" placeholder="В свободной форме"></textarea>
+        <label class="popup__form_label" for="text-area">Текст письма:</label>
+        <textarea class="popup__form_imput" id="text-area" name="text-area" placeholder="В свободной форме"></textarea>
 
-        <button type="submit" class="popup__submit">Отправить</button>
-        <button type="button" aria-label="Закрыть">&#10006</button>
+        <button class="popup__submit" type="submit">Отправить</button>
+        <button class="popup__close" type="button" aria-label="Закрыть">&#10006</button>
       </form>
     </section>
 

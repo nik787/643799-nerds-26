@@ -8,7 +8,7 @@
   <body>
 
     <header class="header">
-      <img src="img/nerds-logo.svg" alt="Нёрдс" width="160" height="65" class="header__logo">
+      <img class="header__logo" src="img/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
 
       <nav class="header__nav">
         <ul class="header__nav_list">
@@ -36,7 +36,7 @@
         </ul>
       </nav>
 
-      <a href="#" class="header__button">Корзина</a>
+      <a class="header__button" href="#">Корзина</a>
 
     </header>
 
@@ -46,11 +46,11 @@
         <h2 class="slider__title">
           Долго, дорого,  скрупулезно.
         </h2>
-        <p class="sslider__text">
+        <p class="slider__text">
           Математически выверенный дизайн
           для вашего сайта или мобильного приложения.
         </p>
-        <a href="#" class="slider__btn">Узнать больше</a>
+        <a class="slider__btn" href="#">Узнать больше</a>
       </section>
 
       <section class="advantages">
@@ -58,29 +58,29 @@
         <ul class="advantages__list">
           <li class="advantages__list_item">
             <article class="advantages__item">
-              <img src="img/index/advantage-1.png" width="300" height="146" alt="Вебсайты">
+              <img class="advantages__item_img" src="img/index/advantage-1.png" width="300" height="146" alt="Вебсайты">
               <h3 class="advantages__item_title">Веб-сайты</h3>
               <p class="advantages__item_text">
                 Мир никогда не будет прежним
                 после того как увидит ваш сайт!
               </p>
-              <a href="#" class="advantages__button">Заказать</a>
+              <a class="advantages__button" href="#">Заказать</a>
             </article>
           </li>
 
           <li class="advantages__list_item">
             <article class="advantages__item">
-              <img src="img/index/advantage-2.png" width="300" height="146" alt="Приложения">
+              <img class="advantages__item_img" src="img/index/advantage-2.png" width="300" height="146" alt="Приложения">
               <h3 class="advantages__item_title">Приложения</h3>
               <p class="advantages__item_text">
                 Покорите топ-10 приложений в
                 AppStore и Google Play
               </p>
-              <a href="#" class="advantages__button">Заказать</a>
+              <a class="advantages__button" href="#">Заказать</a>
             </article>
           </li>
 
-          <li class="advantages__list_item">
+          <li class="advantages__item_img" class="advantages__list_item">
             <article class="advantages__item">
               <img src="img/index/advantage-3.png" width="300" height="146" alt="Презентации">
               <h3 class="advantages__item_title">Презентации</h3>
@@ -88,7 +88,7 @@
                 Вы даже не подозреваете,
                 насколько вы изумительны!
               </p>
-              <a href="#" class="advantages__button">Заказать</a>
+              <a class="advantages__button" href="#">Заказать</a>
             </article>
           </li>
         </ul>
@@ -146,25 +146,25 @@
       <section class="partners">
         <ul class="partners__list">
           <li class="partners__list_item">
-            <a href="https://up.htmlacademy.ru/htmlcss/26" target="_blank" class="partner" aria-label="Сайт Html Academy">
+            <a class="partner" href="https://up.htmlacademy.ru/htmlcss/26" target="_blank" aria-label="Сайт Html Academy">
               <img src="img/index/htmlacdemy-logo.png" width="199" height="68" alt="Логотип Html Academy">
             </a>
           </li>
 
           <li class="partners__list_item">
-            <a href="" target="_blank" class="partner" aria-label="Сайт Барбершоп Бородинский">
+            <a class="partner" href="" target="_blank" aria-label="Сайт Барбершоп Бородинский">
               <img src="img/index/borodinsli-logo.png" alt="Логотип Барбершоп Бородинский">
             </a>
           </li>
 
           <li class="partners__list_item">
-            <a href="" target="_blank" class="partner" aria-label="Сайт мобильного приложения Pink">
+            <a class="partner" href="" target="_blank" aria-label="Сайт мобильного приложения Pink">
               <img src="img/index/pink-logo.png" alt="Логотип приложения Pink">
             </a>
           </li>
 
           <li class="partners__list_item">
-            <a href="" target="_blank" class="partner" aria-label="Сайт интернет-магазина милых вещичек ручной работы">
+            <a class="partner" href="" target="_blank" aria-label="Сайт интернет-магазина милых вещичек ручной работы">
               <img src="img/index/mishka-logo.png" alt="Логотип интернет-магазина Мишка">
             </a>
           </li>
@@ -184,7 +184,7 @@
               <p class="information__tel">
                 тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
               </p>
-              <a href="#" class="information__button">Напишите нам</a>
+              <a class="information__button" href="#">Напишите нам</a>
           </div>
           <div id="map" style="width: 100%; height: 416px"></div>
         </section>
@@ -220,21 +220,21 @@
         Напишите нам
       </h2>
       <form class="popup__form" action="" method="post">
-        <label for="name" class="popup__form_label">
+        <label class="popup__form_label" for="name">
           Ваше имя:
         </label>
-        <input type="text" name="name" id="name" class="popup__form_imput" placeholder="Имя Фамилия">
+        <input class="popup__form_imput" type="text" name="name" id="name" placeholder="Имя Фамилия">
 
-        <label for="email" class="popup__form_label">
+        <label class="popup__form_label" for="email">
           Ваш e-mail:
         </label>
-        <input type="email" name="email" id="email" class="popup__form_imput" placeholder="email@example.com">
+        <input class="popup__form_imput" type="email" name="email" id="email" placeholder="email@example.com">
 
-        <label for="text-area">Текст письма:</label>
-        <textarea name="text-area" id="text-area" placeholder="В свободной форме"></textarea>
+        <label class="popup__form_label" for="text-area">Текст письма:</label>
+        <textarea class="popup__form_imput" id="text-area" name="text-area" placeholder="В свободной форме"></textarea>
 
-        <button type="submit" class="popup__submit">Отправить</button>
-        <button type="button" aria-label="Закрыть">&#10006</button>
+        <button class="popup__submit" type="submit">Отправить</button>
+        <button class="popup__close" type="button" aria-label="Закрыть">&#10006</button>
       </form>
     </section>
 
