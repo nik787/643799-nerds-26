@@ -41,10 +41,62 @@ a {
   margin: 0 auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button {
   text-transform: uppercase;
   padding-top: 19px;
+  padding-right: 39px;
   padding-bottom: 19px;
+  padding-left: 39px;
+
+  color: #fff;
+}
+.button:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--red {
+  background-color: #fb565a;
+}
+.button--red:hover,
+.button--red:focus {
+  background-color: #e74246;
+}
+.button--red:active {
+  background-color: #d7373b;
+}
+
+.button--green {
+  background-color: #00ca74;
+}
+.button--green:hover,
+.button--green:focus {
+  background-color: #00bc6c;
+}
+.button--green:active {
+  background-color: #00aa62;
+}
+
+.button--yellow {
+  background-color: #efc84a;
+}
+.button--yellow:hover,
+.button--yellow:focus {
+  background-color: #eab534;
+}
+.button--yellow:active {
+  background-color: #e5a722;
 }
 /* Базовые стили (конец) */
 
@@ -220,6 +272,37 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 /* Стили секции slider (конец) */
+
+/* Стили секции advantages (начало) */
+.advantages {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.advantages__item {
+  width: 100%;
+  max-width: 300px;
+}
+.advantage__title {
+  margin-top: 26px;
+
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.25;
+  color: #000;
+}
+.advantage__text {
+  margin-top: 26px;
+  margin-bottom: 35px;
+}
+/* Стили секции advantages (конец) */
 
 .partner {
   opacity: .2;
