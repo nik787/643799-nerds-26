@@ -3,57 +3,104 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
 
     <header class="header">
-      <a href="">
-        <img class="header__logo" src="img/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
-      </a>
+      <div class="container">
+        <a class="header__logo" href="">
+          <img class="logo" src="img/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
+        </a>
 
+        <nav class="header__nav">
+          <ul class="nav__list">
 
-      <nav class="header__nav">
-        <ul class="header__nav_list">
+            <li class="nav__item">
+              <a class="active" href="#">Студия</a>
+            </li>
 
-          <li class="nav__item">
-            <a href="#">Информация</a>
-          </li>
+            <li class="nav__item">
+              <a href="#">Клиенты</a>
+            </li>
 
-          <li class="nav__item">
-            <a href="#">Новости</a>
-          </li>
+            <li class="nav__item">
+              <a href="catalog.html">Магазин</a>
+            </li>
 
-          <li class="nav__item">
-            <a href="#">Прайс-Лист</a>
-          </li>
+            <li class="nav__item">
+              <a href="#">Контакты</a>
+            </li>
 
-          <li class="nav__item">
-            <a href="catalog.html">Магазин</a>
-          </li>
+          </ul>
+        </nav>
 
-          <li class="nav__item">
-            <a href="#">Контакты</a>
-          </li>
-
-        </ul>
-      </nav>
-
-      <a class="header__button" href="#">Корзина</a>
-
+        <a class="header__button" href="#">Корзина</a>
+      </div>
     </header>
 
     <main class="main">
 
       <section class="slider">
-        <h2 class="slider__title">
-          Долго, дорого,  скрупулезно.
-        </h2>
-        <p class="slider__text">
-          Математически выверенный дизайн
-          для вашего сайта или мобильного приложения.
-        </p>
-        <a class="slider__btn" href="#">Узнать больше</a>
+        <div class="container">
+          <ul class="slider__list">
+            <li class="slide slide--first active">
+              <h2 class="slide__title">
+                Долго, дорого,  скрупулезно.
+              </h2>
+
+              <p class="slide__text">
+                Математически выверенный дизайн
+                для вашего сайта или мобильного приложения.
+              </p>
+
+              <a class="button slide__btn" href="#">Узнать больше</a>
+            </li>
+            <li class="slide slide--second">
+              <h2 class="slide__title">
+                Любим математику
+                как никто другой
+              </h2>
+
+              <p class="slide__text">
+                Никакого креатива, только математические формулы
+                для расчета идеальных пропорций.
+              </p>
+
+              <a class="button slide__btn" href="#">Узнать больше</a>
+            </li>
+            <li class="slide slide--third">
+              <h2 class="slide__title">
+                Только ночь,
+                только хардкор
+              </h2>
+
+              <p class="slide__text">
+                Работать днем, как все? Мы против этого.
+                Ближе к полуночи работа только начинается.
+              </p>
+
+              <a class="button slide__btn" href="#">Узнать больше</a>
+            </li>
+          </ul>
+          <div class="slider__navigation">
+            <label class="dot active">
+              <span></span>
+              <input type="radio" name="slider-dot">
+            </label>
+            <label class="dot">
+              <span></span>
+              <input type="radio" name="slider-dot">
+            </label>
+            <label class="dot">
+              <span></span>
+              <input type="radio" name="slider-dot">
+            </label>
+          </div>
+        </div>
+
       </section>
 
       <section class="advantages">
