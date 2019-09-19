@@ -14,7 +14,35 @@ function nextSlide(){
     slidesDot[currentSlide].classList.add('active');
 }
 
+var popup = document.querySelector(".popup");
+var popupClose = document.querySelector(".popup .popup__close");
+var popupOpen = document.querySelector(".information__button");
+var popupInput = document.querySelectorAll(".popup__form input, textarea");
+var popupForm = document.querySelector(".popup__form");
+popupForm.addEventListener("submit", function(e) {
+  for (let i = 0; i < popupInput.length; i++) {
+    const element = popupInput[i];
+    element.setAttribute('required', true);
+    if(!element.validity.valid) {
+      e.preventDefault();
+    }
+  }
 
+
+})
+
+
+
+popupOpen.addEventListener('click', openPopup);
+popupClose.addEventListener('click', closePopup);
+function openPopup(e) {
+  event.preventDefault();
+  popup.classList.add('active');
+}
+function closePopup(e) {
+  event.preventDefault();
+  popup.classList.remove('active');
+}
 
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {

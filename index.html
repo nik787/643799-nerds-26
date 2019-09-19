@@ -203,7 +203,7 @@
         <div class="container">
           <ul class="partners__list">
             <li class="partners__list_item">
-              <a class="partner" href="https://up.htmlacademy.ru/htmlcss/26" target="_blank" aria-label="Сайт Html Academy">
+              <a class="partner" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Сайт Html Academy">
                 <img src="img/index/htmlacdemy-logo.png" width="199" height="68" alt="Логотип Html Academy">
               </a>
             </li>
@@ -285,29 +285,47 @@
     </footer>
 
     <!-- Попапы -->
+      <section class="popup">
+        <h2 class="popup__title">
+          Напишите нам
+        </h2>
+        <form class="popup__form" action="" method="post">
+          <div class="popup__group">
+            <label class="popup__label" for="name">
+              Ваше имя:
+              <input class="popup__imput"
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Имя Фамилия">
+            </label>
 
-    <section class="popup">
-      <h2 class="popup__title">
-        Напишите нам
-      </h2>
-      <form class="popup__form" action="" method="post">
-        <label class="popup__form_label" for="name">
-          Ваше имя:
-        </label>
-        <input class="popup__form_imput" type="text" name="name" id="name" placeholder="Имя Фамилия">
 
-        <label class="popup__form_label" for="email">
-          Ваш e-mail:
-        </label>
-        <input class="popup__form_imput" type="email" name="email" id="email" placeholder="email@example.com">
+            <label class="popup__label" for="email">
+              Ваш e-mail:
+              <input class="popup__imput"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="email@example.com">
+            </label>
+          </div>
+          <label class="popup__label" for="text-area">Текст письма:</label>
+          <textarea class="popup__textarea"
+                    id="text-area"
+                    name="text-area"
+                    placeholder="В свободной форме"></textarea>
 
-        <label class="popup__form_label" for="text-area">Текст письма:</label>
-        <textarea class="popup__form_imput" id="text-area" name="text-area" placeholder="В свободной форме"></textarea>
 
-        <button class="popup__submit" type="submit">Отправить</button>
-        <button class="popup__close" type="button" aria-label="Закрыть">&#10006</button>
-      </form>
-    </section>
+          <button class="button popup__submit" type="submit">Отправить</button>
+        </form>
+        <button class="popup__close" type="button" aria-label="Закрыть">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+            <path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/>
+          </svg>
+        </button>
+      </section>
+
 
     <!-- Тут скрипты -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=<334b6d6e-e3bb-4b2f-aaf1-c0e7afff19e2>&lang=ru_RU" type="text/javascript"></script>

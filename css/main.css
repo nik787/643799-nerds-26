@@ -40,7 +40,9 @@ a {
   max-width: 1160px;
   margin: 0 auto;
 }
-
+.container-popup {
+  width: 100%;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -61,6 +63,8 @@ a {
   padding-left: 39px;
 
   color: #fff;
+
+  transition: all 0.3s;
 }
 .button:active {
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
@@ -391,6 +395,7 @@ a {
 
 .partner {
   opacity: 0.2;
+  transition: opacity 0.3s;
 }
 
 .partner:hover,
@@ -406,7 +411,7 @@ a {
 /* Стили секции footer (начало) */
 .footer__contact .container {
   position: relative;
-  z-index: 9999;
+  z-index: 9980;
   padding-top: 80px;
 }
 .contact__information {
@@ -511,5 +516,107 @@ a {
 
 
 .popup {
+  position: fixed;
+  bottom: 180px;
+  z-index: 9999;
   display: none;
+  width: 100%;
+  max-width: 960px;
+  box-sizing: border-box;
+  padding: 73px 100px;
+  margin: 0 25%;
+  box-sizing: border-box;
+  background-color: #fff;
+
+  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
+.popup.active {
+  display: block;
+}
+
+.popup__title {
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+  color: #000000;
+}
+
+.popup__form {
+  margin-top: 50px;
+}
+.popup__group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+.popup__label,
+.popup__imput,
+.popup__textarea {
+  display: block;
+  box-sizing: border-box;
+}
+.popup__label {
+  width: 100%;
+  max-width: 360px;
+  font-weight: bold;
+  line-height: 1.13;
+  color: #000000;
+}
+.popup__imput {
+  width: 100%;
+  max-width: 360px;
+  margin-top: 12px;
+  padding: 15px;
+  border: solid 2px #d7dcde;
+  box-sizing: border-box;
+}
+
+.popup__textarea {
+  width: 100%;
+  height: 118px;
+  margin-top: 12px;
+  padding: 15px;
+  border: solid 2px #d7dcde;
+  resize: none;
+}
+.popup__submit {
+  background-color: #fb565a;
+  border: none;
+  margin-top: 47px;
+}
+.popup__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: transparent;
+  border: none;
+}
+.popup__close svg {
+  opacity: 0.3;
+}
+.popup__close:hover svg,
+.popup__close:focus svg {
+  opacity: 1;
+}
+
+.popup__close:active svg {
+  opacity: 0.1;
+}
+.popup__textarea:hover,
+.popup__imput:hover {
+  border: solid 2px #b4b9bb;
+}
+.popup__textarea:focus,
+.popup__imput:focus {
+  outline: none;
+  border: solid 2px #000000;
+  color: #000;
+}
+
+.popup__textarea:invalid,
+.popup__imput:invalid {
+  border: solid 2px #e74246;
+  background: #fff;
+  color: #e74246;
 }
