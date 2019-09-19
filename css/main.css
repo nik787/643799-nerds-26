@@ -8,3 +8,7 @@
 .partner:active {
   opacity: .1;
 }
+.contact__map {
+  width: 100%;
+  height: 416px;
+}
