@@ -410,6 +410,7 @@ a {
   padding-top: 80px;
 }
 .contact__information {
+  box-sizing: border-box;
   position: absolute;
   width: 100%;
   max-width: 319px;
@@ -464,6 +465,7 @@ a {
   align-items: center;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .social__button {
   display: flex;
@@ -487,6 +489,8 @@ a {
   opacity: 0.3;
 }
 .social__text {
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: 140px;
 
   font-size: 36px;
