@@ -15,34 +15,34 @@
           <img class="logo" src="img/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
         </a>
 
-        <nav class="header__nav">
+        <nav class="nav">
           <ul class="nav__list">
 
             <li class="nav__item">
-              <a class="active" href="#">Студия</a>
+              <a class="nav__link active" href="#">Студия</a>
             </li>
 
             <li class="nav__item">
-              <a href="#">Клиенты</a>
+              <a class="nav__link" href="#">Клиенты</a>
             </li>
 
             <li class="nav__item">
-              <a href="catalog.html">Магазин</a>
+              <a class="nav__link" href="catalog.html">Магазин</a>
             </li>
 
             <li class="nav__item">
-              <a href="#">Контакты</a>
+              <a class="nav__link" href="#">Контакты</a>
             </li>
-
           </ul>
+          <a class="nav__link nav__link--basket" href="#">Корзина</a>
         </nav>
-
-        <a class="header__button" href="#">Корзина</a>
       </div>
     </header>
 
     <main class="main">
-
+      <h1 class="main__title visually-hidden">
+        Нёрдс - дизайн студия
+      </h1>
       <section class="slider">
         <div class="container">
           <ul class="slider__list">
@@ -149,8 +149,8 @@
       <section class="studio">
         <h2 class="studio__title visually-hidden">О нас</h2>
         <div class="container">
-          <div class="studio__about">
-            <p class="about__title">
+          <div class="about">
+            <p class="about__slogan">
               Мы — маленькая, но гордая
               дизайн-студия из Краснодара.
             </p>
@@ -160,7 +160,7 @@
               превыше креатива. Работаем не покладая рук, как роботы.
             </p>
 
-            <p class="about__list-title">
+            <p class="about__title">
               Выполняем заказы на разработку:
             </p>
             <ul class="about__list">
@@ -175,8 +175,8 @@
               </li>
             </ul>
           </div>
-          <div class="studio__indicators">
-            <img class="studio__logo" src="img/index/nerds.jpg" width="360" height="208" alt="Нердс">
+          <div class="indicators">
+            <img class="logo" src="img/index/nerds.jpg" width="360" height="208" alt="Нердс">
             <p class="indicators__title">
               C 2004 года любим точность во всем:
             </p>
@@ -199,28 +199,28 @@
 
       </section>
       <section class="partners">
-        <h2 class="partners__title visually-hidden">Шаши партнеры</h2>
+        <h2 class="partners__title visually-hidden">Наши партнеры</h2>
         <div class="container">
           <ul class="partners__list">
-            <li class="partners__list_item">
+            <li class="partners__item">
               <a class="partner" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Сайт Html Academy">
                 <img src="img/index/htmlacdemy-logo.png" width="199" height="68" alt="Логотип Html Academy">
               </a>
             </li>
 
-            <li class="partners__list_item">
+            <li class="partners__item">
               <a class="partner" href="" target="_blank" aria-label="Сайт Барбершоп Бородинский">
                 <img src="img/index/borodinsli-logo.png" alt="Логотип Барбершоп Бородинский">
               </a>
             </li>
 
-            <li class="partners__list_item">
+            <li class="partners__item">
               <a class="partner" href="" target="_blank" aria-label="Сайт мобильного приложения Pink">
                 <img src="img/index/pink-logo.png" alt="Логотип приложения Pink">
               </a>
             </li>
 
-            <li class="partners__list_item">
+            <li class="partners__item">
               <a class="partner" href="" target="_blank" aria-label="Сайт интернет-магазина милых вещичек ручной работы">
                 <img src="img/index/mishka-logo.png" alt="Логотип интернет-магазина Мишка">
               </a>
@@ -234,7 +234,7 @@
       <section class="footer__contact">
         <h2 class="footer__title visually-hidden">Контактная информация</h2>
         <div class="container">
-          <div class="contact__information">
+          <div class="information">
               <h3 class="information__title">Nerds design studio</h3>
               <p class="information__addr">
                 191186, Санкт-Петербург,
@@ -246,11 +246,11 @@
               <a class="button information__button" href="#">Напишите нам</a>
           </div>
         </div>
-        <div class="contact__map" id="map"></div>
+        <div class="footer__map" id="map"></div>
       </section>
 
 
-        <section class="footer__social">
+        <section class="social">
           <h3 class="social__title visually-hidden">Наши социальные сети</h3>
           <div class="container">
             <ul class="social__list">
