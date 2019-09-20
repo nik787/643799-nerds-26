@@ -20,6 +20,14 @@
 }
 
 /* Базовые стили (начало) */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -44,31 +52,35 @@ a {
 
 .visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+
+  border: 0;
+
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 .button {
   display: inline-block;
-  text-transform: uppercase;
   padding-top: 19px;
   padding-right: 39px;
   padding-bottom: 19px;
   padding-left: 39px;
 
+  text-transform: uppercase;
   color: #fff;
 
   transition: all 0.3s;
 }
 
 .button:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   color: rgba(255, 255, 255, 0.3);
+
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .button--red {
@@ -127,6 +139,7 @@ a {
 }
 
 .nav__logo {
+  flex-shrink: 0;
   flex-basis: 160px;
 }
 
@@ -141,19 +154,20 @@ a {
 
 .nav__list {
   display: flex;
-  list-style: none;
-}
+  flex-basis: 438px;
+  justify-content: space-between;
+  padding: 0;
 
-.nav__item {
-  margin-right: 47px;
+  list-style: none;
 }
 
 .nav__link {
   display: inline-block;
   padding: 10px 0;
+
   font-weight: 500;
-  color: #000;
   text-transform: uppercase;
+  color: #000;
 }
 
 .nav__link:hover,
@@ -194,12 +208,14 @@ a {
 
 .slider__navigation .dot {
   position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 18px;
   height: 18px;
   margin-right: 17px;
+
   background-color: #fff;
   border-radius: 50%;
 }
@@ -210,28 +226,33 @@ a {
 
 .dot.active span {
   position: absolute;
+
   display: block;
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+
   border: 3px solid #c1c1c1;
+  border-radius: 50%;
 }
 
 .dot input[type="radio"] {
   position: absolute;
+
   opacity: 0;
 }
 
 .slider__list {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .slide {
   display: none;
   padding-top: 67px;
   padding-bottom: 80px;
+
   background-position: right top;
   background-size: contain;
   background-repeat: no-repeat;
@@ -256,8 +277,8 @@ a {
 .slide__title {
   width: 100%;
   max-width: 515px;
-
   margin: 0;
+
   font-size: 55px;
   font-weight: 500;
   line-height: 1;
@@ -272,10 +293,13 @@ a {
 }
 
 .slide__btn {
-  background: #fb565a;
   padding-left: 53px;
   padding-right: 53px;
+
   color: #fff;
+
+  background: #fb565a;
+
 }
 
 .slide__btn:hover,
@@ -292,26 +316,28 @@ a {
 .advantages .container {
   padding-top: 80px;
   padding-bottom: 80px;
+
   border-bottom: 2px solid #efefef;
 }
 
 .advantages__list {
   display: flex;
   justify-content: space-around;
-  list-style: none;
+  margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .advantages__item {
-  width: 100%;
-  max-width: 300px;
+  flex-shrink: 0;
+  flex-basis: 300px;
 }
 .advantage__title {
   margin-top: 26px;
 
   font-size: 24px;
   font-weight: bold;
-  font-style: normal;
   line-height: 1.25;
   color: #000;
 }
@@ -327,17 +353,18 @@ a {
   justify-content: space-between;
   padding-top: 80px;
   padding-bottom: 80px;
+
   border-bottom: 2px solid #efefef;
 }
 .about {
   width: 100%;
-  max-width: 650px;
+  flex-basis: 650px;
 }
 .about__slogan {
   font-size: 45px;
   font-weight: 500;
   line-height: 1;
-  color: #000
+  color: #000;
 }
 .about__subtitle {
   margin-top: 35px;
@@ -348,46 +375,54 @@ a {
   color: #000000;
 }
 .about__list {
-  list-style: none;
+  margin: 0;
   padding: 0;
+  list-style: none;
 }
 .about__item {
   margin-top: 25px;
 }
 .about__item::before {
   content: "";
+
   display: inline-block;
   width: 25px;
   height: 2px;
-  background: #d7373b;
-  vertical-align: middle;
   margin-right: 15px;
+
+  vertical-align: middle;
+
+  background: #d7373b;
 }
-.studio__indicators {
-  text-align: center;
+.indicators {
+  width: 100%;
+  flex-basis: 360px;
 }
 .indicators__title {
   margin-top: 50px;
+  text-align: center;
   font-weight: bold;
   color: #000;
 }
 .indicators__list {
   display: flex;
   justify-content: space-between;
-  list-style: none;
   padding: 0;
+
+  list-style: none;
 }
 .indicators__item {
   width: 105px;
+  text-align: left;
   font-size: 45px;
   font-weight: bold;
   color: #000;
 }
 .indicators__item span {
   display: block;
+
   font-size: 16px;
   font-weight: normal;
-  text-align: left;
   line-height: 1.13;
   color: #283136;
 }
@@ -397,16 +432,23 @@ a {
 .partners .container {
   padding-top: 46px;
   padding-bottom: 44px;
+
   border-bottom: 2px solid #efefef;
 }
 
 .partners__list {
   display: flex;
   justify-content: space-between;
-  list-style: none;
+  align-items: center;
+  margin: 0;
   padding: 0;
-}
 
+  list-style: none;
+}
+.partners__item {
+  width: 100%;
+  flex-basis: 210px;
+}
 .partner {
   opacity: 0.2;
   transition: opacity 0.3s;
@@ -426,31 +468,34 @@ a {
 .footer__contact .container {
   position: relative;
   z-index: 9980;
+
   padding-top: 80px;
 }
 .information {
-  box-sizing: border-box;
   position: absolute;
+
   width: 100%;
   max-width: 319px;
-  background-color: #fff;
-  padding: 50px;
   margin-top: 54px;
   margin-bottom: 54px;
+  padding: 50px;
 
+  box-sizing: border-box;
+  background-color: #fff;
 }
 .information__title {
   margin-top: 0;
   margin-bottom: 32px;
+
   font-size: 18px;
   font-weight: bold;
-  font-style: normal;
   line-height: 1.67;
   text-transform: uppercase;
 }
 .information__addr,
 .information__tel {
   margin-bottom: 20px;
+
   line-height: 1.13;
   color: #666666;
 }
@@ -458,19 +503,21 @@ a {
   color: inherit;
 }
 .information__button {
-  margin-top: 17px;
-  background-color: #fb565a;
   width: 100%;
+  margin-top: 17px;
   padding-left: 0;
   padding-right: 0;
+
   text-align: center;
+
+  background-color: #fb565a;
 }
 .information__button:active {
   background-color: #d7373b;
 }
 .footer__map {
   width: 100%;
-  height: 430px;
+  min-height: 430px;
 }
 
 .social {
@@ -481,10 +528,12 @@ a {
 }
 .social__list {
   display: flex;
+  flex-basis: 246px;
   align-items: center;
-  list-style: none;
   padding: 0;
   margin: 0;
+
+  list-style: none;
 }
 .social__button {
   display: flex;
@@ -492,9 +541,10 @@ a {
   align-items: center;
   width: 79px;
   height: 79px;
-  border-radius: 50%;
   margin-right: 12px;
   padding: 0;
+
+  border-radius: 50%;
   background: #e1e1e1;
 }
 .social__button:hover,
@@ -519,6 +569,7 @@ a {
 }
 .social__text span {
   display: inline-block;
+
   font-size: 16px;
   font-weight: normal;
   line-height: 1.38;
@@ -533,15 +584,15 @@ a {
   position: fixed;
   bottom: 180px;
   z-index: 9999;
+
   display: none;
   width: 100%;
   max-width: 960px;
-  box-sizing: border-box;
-  padding: 73px 100px;
   margin: 0 25%;
+  padding: 73px 100px;
+
   box-sizing: border-box;
   background-color: #fff;
-
   box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 .popup.active {
@@ -549,10 +600,11 @@ a {
 }
 
 .popup__title {
+  margin: 0;
+
   font-size: 45px;
   font-weight: 500;
   line-height: 1;
-  margin: 0;
   color: #000000;
 }
 
@@ -573,6 +625,7 @@ a {
 .popup__label {
   width: 100%;
   max-width: 360px;
+
   font-weight: bold;
   line-height: 1.13;
   color: #000000;
@@ -582,8 +635,9 @@ a {
   max-width: 360px;
   margin-top: 12px;
   padding: 15px;
-  border: solid 2px #d7dcde;
+
   box-sizing: border-box;
+  border: solid 2px #d7dcde;
 }
 
 .popup__textarea {
@@ -591,18 +645,22 @@ a {
   height: 118px;
   margin-top: 12px;
   padding: 15px;
+
   border: solid 2px #d7dcde;
+
   resize: none;
 }
 .popup__submit {
+  margin-top: 47px;
+
   background-color: #fb565a;
   border: none;
-  margin-top: 47px;
 }
 .popup__close {
   position: absolute;
   top: 30px;
   right: 30px;
+
   background: transparent;
   border: none;
 }
@@ -623,14 +681,16 @@ a {
 }
 .popup__textarea:focus,
 .popup__imput:focus {
+  color: #000;
+
   outline: none;
   border: solid 2px #000000;
-  color: #000;
 }
 
 .popup__textarea:invalid,
 .popup__imput:invalid {
+  color: #e74246;
+
   border: solid 2px #e74246;
   background: #fff;
-  color: #e74246;
 }
