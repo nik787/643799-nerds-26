@@ -1,6 +1,6 @@
 var slides = document.querySelectorAll(".slider__list .slide");
 var slidesDot = document.querySelectorAll(".slider__navigation .dot");
-
+var sliderRange = document.querySelectorAll(".slider__range");
 
 
 var currentSlide = 0;
