@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -17,7 +17,7 @@
   font-style: normal;
   font-weight: 700;
   src: local("Roboto Bold"), local("Roboto-Bold"), url(fonts/robotobold.woff2) format("woff2"), url(fonts/robotobold.woff) format("woff");
-}
+} */
 
 /* Базовые стили (начало) */
 *, *::before, *::after {
@@ -44,11 +44,6 @@ a {
   text-decoration: none;
 }
 
-.catalog-page ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
 .container {
   width: 100%;
@@ -171,7 +166,7 @@ a {
 
 .nav__link {
   display: block;
-  padding: 10px 0;
+  padding: 10px 0 4px;
   line-height: 1.88;
   font-weight: 500;
   text-transform: uppercase;
@@ -609,6 +604,7 @@ a {
 
 /* Стили страницы каталога (начало) */
 .catalog-page .header__title {
+  margin: 72px 0 105px;
   font-size: 55px;
   font-weight: 500;
   line-height: 1;
@@ -618,7 +614,7 @@ a {
 .catalog-page > .container {
   display: flex;
   justify-content: space-between;
-  padding: 60px 0;
+  padding: 34px 0 0;
 }
 
 .filter {
@@ -627,24 +623,35 @@ a {
   flex-basis: 261px;
 }
 
+.filter ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
 .group {
   border: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 25px;
+}
+.group__item--range {
+  width: 100%;
 }
 .group__title {
-  padding: 21px 0;
+  padding: 20px 0;
 
   font-size: 18px;
   font-weight: bold;
   line-height: 1.67;
-  letter-spacing: 0.18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   color: #000000;
 }
 
 .price-slider {
   width: 100%;
-  margin: 56px 0 20px;
+  margin: 29px 0 20px;
   padding: 40px 20px;
   background-color: #eeeeee;
 }
@@ -677,15 +684,25 @@ a {
   cursor: pointer;
 }
 
+.filter__label--range {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.filter__label--range:nth-child(2) {
+   margin-right: 33px; /* Не пойму почему не работает */
+}
+
 .control {
   display: block;
   position: relative;
   padding-left: 40px;
   margin-bottom: 5px;
-  padding-top: 3px;
+  padding-top: 0;
+  padding-bottom: 9px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 15px;
+  margin-top: 0;
 }
 .control input {
   position: absolute;
@@ -841,16 +858,24 @@ a {
   flex-basis: 760px;
 }
 
+.catalog ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .sorting {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
   align-items: center;
-  margin-bottom: 59px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .sorting__group {
   display: flex;
+  font-size: 14px;
 }
 .sorting__item {
   margin-left: 26px;
@@ -919,7 +944,7 @@ a {
   transition: opacity 0.3s;
 }
 .product__title {
-  margin: 0 0 25px;
+  margin: 0 0 10px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.67;
@@ -937,7 +962,7 @@ a {
 }
 
 .product__description {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 16px;
   line-height: 1.13;
   color: #666666;
@@ -971,7 +996,8 @@ a {
 
   font-size: 13.5px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 0.5;
+  text-transform: uppercase;
   border: 3px solid #dbdbdb;
   background-color: #eeeeee;
 }
