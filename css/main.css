@@ -915,7 +915,6 @@ a {
   flex-basis: 360px;
   margin-top: 63px;
   text-align: center;
-  border: 1px solid rgba(0, 1, 1, 0.1);
 }
 .product:hover .product__card,
 .product:focus .product__card {
@@ -926,13 +925,14 @@ a {
 }
 .product__img {
   width: 100%;
-
+  position: relative;
 }
 
 .product::before {
   content: url(../img/catalog/browser.png);
   position: absolute;
   top: -39px;
+  z-index: 1;
   opacity: 0.12;
   transition: opacity 0.3s;
 }
