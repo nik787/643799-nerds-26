@@ -1,19 +1,3 @@
-var slides = document.querySelectorAll(".slider__list .slide");
-var slidesDot = document.querySelectorAll(".slider__navigation .dot");
-var sliderRange = document.querySelectorAll(".slider__range");
-
-
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,5000);
-
-function nextSlide(){
-    slides[currentSlide].classList.remove('active');
-    slidesDot[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].classList.add('active');
-    slidesDot[currentSlide].classList.add('active');
-}
-
 var popup = document.querySelector(".popup");
 var popupClose = document.querySelector(".popup .popup__close");
 var popupOpen = document.querySelector(".information__button");

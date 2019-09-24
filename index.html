@@ -15,8 +15,7 @@
           <a class="nav__logo" href="">
             <img class="logo" src="img/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
           </a>
-          <ul class="nav__list">
-
+          <ul class="nav__list nav__list--main">
             <li class="nav__item">
               <a class="nav__link" href="#">Студия</a>
             </li>
@@ -33,7 +32,12 @@
               <a class="nav__link" href="#">Контакты</a>
             </li>
           </ul>
-          <a class="nav__link nav__link--basket" href="#">Корзина</a>
+          <ul class="nav__list nav__list--secodary">
+            <li class="nav__item">
+              <a class="nav__link nav__link--basket" href="#">Корзина</a>
+            </li>
+          </ul>
+
         </nav>
       </div>
     </header>
@@ -44,11 +48,20 @@
       </h1>
       <section class="slider">
         <div class="container">
+          <h2 class="visually-hidden">Преимущества</h2>
+          <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+          <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+          <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+          <div class="slider__navigation">
+            <label class="dot dot--1" for="product-1">Первый</label>
+            <label class="dot dot--2" for="product-2">Второй</label>
+            <label class="dot dot--3" for="product-3">Третий</label>
+          </div>
           <ul class="slider__list">
-            <li class="slide slide--first active">
-              <h2 class="slide__title">
+            <li class="slide slide--first">
+              <h3 class="slide__title">
                 Долго, дорого,  скрупулезно.
-              </h2>
+              </h3>
 
               <p class="slide__text">
                 Математически выверенный дизайн
@@ -58,10 +71,10 @@
               <a class="button slide__btn" href="#">Узнать больше</a>
             </li>
             <li class="slide slide--second">
-              <h2 class="slide__title">
+              <h3 class="slide__title">
                 Любим математику
                 как никто другой
-              </h2>
+              </h3>
 
               <p class="slide__text">
                 Никакого креатива, только математические формулы
@@ -71,10 +84,10 @@
               <a class="button slide__btn" href="#">Узнать больше</a>
             </li>
             <li class="slide slide--third">
-              <h2 class="slide__title">
+              <h3 class="slide__title">
                 Только ночь,
                 только хардкор
-              </h2>
+              </h3>
 
               <p class="slide__text">
                 Работать днем, как все? Мы против этого.
@@ -84,24 +97,9 @@
               <a class="button slide__btn" href="#">Узнать больше</a>
             </li>
           </ul>
-          <div class="slider__navigation">
-            <label class="dot active">
-              <span></span>
-              <input type="radio" name="slider-dot">
-            </label>
-            <label class="dot">
-              <span></span>
-              <input type="radio" name="slider-dot">
-            </label>
-            <label class="dot">
-              <span></span>
-              <input type="radio" name="slider-dot">
-            </label>
-          </div>
         </div>
 
       </section>
-
       <section class="advantages">
         <div class="container">
           <h2 class="advantages__title visually-hidden">Наши преимущества</h2>
