@@ -14,14 +14,13 @@
           <a class="nav__logo" href="index.html">
             <img class="logo" src="img/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
           </a>
-          <ul class="nav__list">
-
+          <ul class="nav__list nav__list--main">
             <li class="nav__item">
-              <a class="nav__link" href="#">Студия</a>
+              <a class="nav__link active" href="#">Студия</a>
             </li>
 
             <li class="nav__item">
-              <a class="nav__link" href="#">Клиенты</a>
+              <a class="nav__link active" href="#">Клиенты</a>
             </li>
 
             <li class="nav__item">
@@ -29,10 +28,15 @@
             </li>
 
             <li class="nav__item">
-              <a class="nav__link" href="#">Контакты</a>
+              <a class="nav__link active" href="#">Контакты</a>
             </li>
           </ul>
-          <a class="nav__link nav__link--basket" href="#">Корзина</a>
+          <ul class="nav__list nav__list--secodary">
+            <li class="nav__item">
+              <a class="nav__link nav__link--basket active" href="#">Корзина</a>
+            </li>
+          </ul>
+
         </nav>
         <h1 class="header__title">Магазин готовых шаблонов</h1>
       </div>
@@ -43,30 +47,21 @@
         <form class="filter__form" action="https://echo.htmlacademy.ru/" method="post">
           <h2 class="filter__title visually-hidden">Фильтр товаров</h2>
           <fieldset class="group">
-            <legend class="group__title">Стоимость: </legend>
-            <ul class="group__list">
-              <li class="group__item">
-                <div class="price-slider">
-                  <div class="slider">
-                    <div class="slider__range">
-                      <div class="slider__nav">
-                        <div class="range range1"></div>
-                        <div class="range range2"></div>
-                      </div>
-                    </div>
-                    <input class="visually-hidden" id="range1" type="range" name="range1" value="0" min="0" max="10000" step="1">
-                    <input class="visually-hidden" id="range2" type="range" name="range2" value="15000" min="0" max="20000" step="1">
+            <legend class="group__title group__title--range">Стоимость: </legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar">
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
                   </div>
                 </div>
-              </li>
-              <li class="group__item group__item--range">
-                  <label class="filter__label filter__label--range" for="rangeValue1">От: </label>
-                  <input class="filter__price" id="rangeValue1" type="text" value="0">
-
-                  <label class="filter__label filter__label--range" for="rangeValue2">До: </label>
-                  <input class="filter__price" id="rangeValue2" type="text" value="15000">
-              </li>
-            </ul>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+              </div>
+            </div>
           </fieldset>
 
           <fieldset class="group">
@@ -74,28 +69,19 @@
 
             <ul class="group__list">
               <li class="group__item">
-                <label class="control control-radio">
-                  Адаптивная
-                  <input type="radio" name="radio" checked="checked" />
-                  <div class="control_indicator"></div>
-                </label>
+                <input class="filter__radio visually-hidden" id="adaptive" type="radio" name="radio" checked="checked" />
+                <label class="filter__label" for="adaptive">Адаптивная</label>
               </li>
 
               <li class="group__item">
-                  <label class="control control-radio">
-                    Фиксированная
-                    <input type="radio" name="radio"/>
-                    <div class="control_indicator"></div>
-                  </label>
-                </li>
+                <input class="filter__radio visually-hidden" id="fix" type="radio" name="radio"/>
+                <label class="filter__label" for="fix">Фиксированная</label>
+              </li>
 
               <li class="group__item">
-                  <label class="control control-radio">
-                    Резиновая
-                    <input type="radio" name="radio"/>
-                    <div class="control_indicator"></div>
-                  </label>
-                </li>
+                <input class="filter__radio visually-hidden" id="rez" type="radio" name="radio"/>
+                <label class="filter__label" for="rez">Резиновая</label>
+              </li>
             </ul>
           </fieldset>
 
@@ -104,27 +90,27 @@
 
             <ul class="group__list">
               <li class="group__item">
-                <input class="filter__checkbox" type="checkbox" id="check-slider" checked/>
+                <input class="visually-hidden" type="checkbox" id="check-slider" checked/>
                 <label class="filter__label" for="check-slider">Слайдер</label>
               </li>
 
               <li class="group__item">
-                <input class="filter__checkbox" type="checkbox" id="check-advantages"/>
+                <input class="visually-hidden" type="checkbox" id="check-advantages"/>
                 <label class="filter__label" for="check-advantages">Блок преимуществ</label>
               </li>
 
               <li class="group__item">
-                <input class="filter__checkbox" type="checkbox" id="check-news" checked/>
+                <input class="visually-hidden" type="checkbox" id="check-news" checked/>
                 <label class="filter__label" for="check-news">Новости</label>
               </li>
 
               <li class="group__item">
-                <input class="filter__checkbox" type="checkbox" id="check-gallery"/>
+                <input class="visually-hidden" type="checkbox" id="check-gallery"/>
                 <label class="filter__label" for="check-gallery">Галерея</label>
               </li>
 
               <li class="group__item">
-                <input class="filter__checkbox" type="checkbox" id="check-basket"/>
+                <input class="visually-hidden" type="checkbox" id="check-basket"/>
                 <label class="filter__label" for="check-basket">Корзина</label>
               </li>
             </ul>
