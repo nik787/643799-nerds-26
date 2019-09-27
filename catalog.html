@@ -40,7 +40,7 @@
     <div class="container">
 
       <aside class="filter">
-        <form class="filter__form" action="" method="post">
+        <form class="filter__form" action="https://echo.htmlacademy.ru/" method="post">
           <h2 class="filter__title visually-hidden">Фильтр товаров</h2>
           <fieldset class="group">
             <legend class="group__title">Стоимость: </legend>
@@ -59,7 +59,7 @@
                   </div>
                 </div>
               </li>
-              <li class="group__item .group__item--range">
+              <li class="group__item group__item--range">
                   <label class="filter__label filter__label--range" for="rangeValue1">От: </label>
                   <input class="filter__price" id="rangeValue1" type="text" value="0">
 
@@ -280,18 +280,16 @@
     <footer class="footer">
       <section class="footer__contact">
         <h2 class="footer__title visually-hidden">Контактная информация</h2>
-        <div class="container">
-          <div class="information">
-              <h3 class="information__title">Nerds design studio</h3>
-              <p class="information__addr">
-                191186, Санкт-Петербург,
-                ул. Б. Конюшенная, д. 19/8
-              </p>
-              <p class="information__tel">
-                тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
-              </p>
-              <a class="button information__button" href="#">Напишите нам</a>
-          </div>
+        <div class="information">
+            <h3 class="information__title">Nerds design studio</h3>
+            <p class="information__addr">
+              191186, Санкт-Петербург,
+              ул. Б. Конюшенная, д. 19/8
+            </p>
+            <p class="information__tel">
+              тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+            </p>
+            <a class="button information__button button--red" href="#">Напишите нам</a>
         </div>
         <div class="footer__map" id="map"></div>
       </section>
@@ -336,7 +334,7 @@
         <h2 class="popup__title">
           Напишите нам
         </h2>
-        <form class="popup__form" action="" method="post">
+        <form class="popup__form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="popup__group">
             <label class="popup__label" for="name">
               Ваше имя:
@@ -364,7 +362,7 @@
                     placeholder="В свободной форме"></textarea>
 
 
-          <button class="button popup__submit" type="submit">Отправить</button>
+          <button class="button popup__submit button--red" type="submit">Отправить</button>
         </form>
         <button class="popup__close" type="button" aria-label="Закрыть">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
@@ -375,8 +373,9 @@
 
 
     <!-- Тут скрипты -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=<334b6d6e-e3bb-4b2f-aaf1-c0e7afff19e2>&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=334b6d6e-e3bb-4b2f-aaf1-c0e7afff19e2&lang=ru_RU"></script>
     <script src="js/main.js"></script>
+
 
   </body>
 </html>

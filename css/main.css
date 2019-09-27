@@ -45,6 +45,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  box-sizing: content-box;
+}
+
 
 .container {
   width: 100%;
@@ -69,7 +75,7 @@ a {
 
 .button {
   display: block;
-  padding: 13px 0;
+  padding: 15px 0;
 
   font-size: 16px;
   line-height: 18px;
@@ -83,6 +89,7 @@ a {
   border: none;
 
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .button:active {
@@ -102,6 +109,7 @@ a {
 
 .button--red:active {
   background-color: #d7373b;
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .button--green {
@@ -115,6 +123,7 @@ a {
 
 .button--green:active {
   background-color: #00aa62;
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .button--yellow {
@@ -128,6 +137,8 @@ a {
 
 .button--yellow:active {
   background-color: #e5a722;
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+
 }
 /* Базовые стили (конец) */
 
@@ -217,14 +228,14 @@ a {
 /* Стили секции slider (начало) */
 .slider {
   position: relative;
-
+  border-top: 1px solid transparent;
   background-color: #eeeeee;
 }
 
 .slider__navigation {
   position: absolute;
   left: 50%;
-  bottom: 104px;
+  bottom: 103px;
   z-index: 100;
 
   width: 160px;
@@ -267,19 +278,18 @@ a {
 .slider__list {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
 .slide {
   display: none;
-  padding: 78px 0 80px 0;
+  padding: 61px 0 80px 0;
 }
 
 .slide--first {
   background-image: url("../img/index/slide-1.png");
   background-repeat: no-repeat;
-  background-position: 93% 18px;
+  background-position: 93% 2px;
 }
 
 .slide--second {
@@ -335,7 +345,7 @@ a {
 .slide__text {
   max-width: 430px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 }
 
 .slide__btn {
@@ -357,10 +367,10 @@ a {
 /* Стили секции slider (конец) */
 
 /* Стили секции advantages (начало) */
-.advantages .container {
+.advantages {
   padding-top: 80px;
-  padding-bottom: 80px;
-
+}
+.advantages .container {
   border-bottom: 2px solid #efefef;
 }
 
@@ -368,7 +378,7 @@ a {
   display: flex;
   margin: 0;
   padding: 0;
-
+  margin-bottom: 80px;
   list-style: none;
 }
 
@@ -380,9 +390,12 @@ a {
 .advantages__item:last-child {
   margin-right: 0;
 }
+.advantage__img {
+  margin-bottom: 19px;
+}
 .advantage__title {
-  margin: 17px 0;
-
+  margin: 0;
+  margin-bottom: 16px;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
@@ -391,7 +404,7 @@ a {
 }
 .advantage__text {
   width: 260px;
-  margin-top: 17px;
+  margin: 0;
   margin-bottom: 33px;
 }
 .advantage__button {
@@ -400,23 +413,27 @@ a {
 /* Стили секции advantages (конец) */
 
 /* Стили секции studio (начало) */
+.studio {
+  padding-top: 40px;
+}
 .studio .container {
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 49px;
 
   border-bottom: 2px solid #efefef;
 }
 .about {
   width: 100%;
   flex-basis: 650px;
+  padding-top: 35px;
 }
 .about__slogan {
-  margin: 34px 0;
+  margin: 0;
+  margin-bottom: 34px;
   font-size: 45px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 45px;
   color: #000;
 }
 .about__subtitle {
@@ -424,7 +441,9 @@ a {
   margin-bottom: 39px;
 }
 .about__title {
-  font-weight: bold;
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
   text-transform: uppercase;
   color: #000000;
 }
@@ -434,17 +453,18 @@ a {
   list-style: none;
 }
 .about__item {
-  margin-top: 24px;
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 36px;
 }
 .about__item::before {
   content: "";
-
-  display: inline-block;
+  position: absolute;
+  display: block;
   width: 25px;
   height: 2px;
-  margin-right: 8px;
-
-  vertical-align: middle;
+  top: 50%;
+  left: 0;
 
   background: #d7373b;
 }
@@ -452,9 +472,12 @@ a {
   width: 100%;
   flex-basis: 360px;
 }
+.indicators__logo {
+  margin-bottom: 30px;
+}
 .indicators__title {
-  margin-top: 30px;
-  margin-bottom: 0;
+  margin: 0;
+  margin-bottom: 29px;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
@@ -463,7 +486,7 @@ a {
 .indicators__list {
   display: flex;
   padding: 0;
-  margin: 28px 0 0 0;
+  margin: 0;
   list-style: none;
 }
 .indicators__item {
@@ -471,7 +494,7 @@ a {
   margin-right: 14px;
   text-align: left;
   font-size: 45px;
-  font-weight: bold;
+  font-weight: 700;
   font-family: "Roboto";
   color: #000;
 }
@@ -490,16 +513,17 @@ a {
 /* Стили секции studio (конец) */
 
 /* Стили секции partners (начало) */
+.partners {
+  padding: 45px 0 0;
+  margin-bottom: 60px;
+}
 .partners .container {
-  padding-top: 46px;
-  padding-bottom: 44px;
+  padding-bottom: 49px;
 
   border-bottom: 2px solid #efefef;
 }
-
 .partners__list {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -507,8 +531,22 @@ a {
   list-style: none;
 }
 .partners__item {
+  position: relative;
   width: 100%;
   flex-basis: 210px;
+  padding: 0 45px;
+  box-sizing: content-box;
+}
+.partners__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 2px;
+  height: 52px;
+  background-color: #cccccc;
+  opacity: 0.3;
 }
 .partner {
   opacity: 0.2;
@@ -526,64 +564,61 @@ a {
 /* Стили секции partners (конец) */
 
 /* Стили секции footer (начало) */
-.footer__contact .container {
+.footer__contact {
   position: relative;
-  z-index: 9980;
 
-  padding-top: 80px;
+
 }
 .information {
   position: absolute;
-
-  width: 100%;
-  max-width: 319px;
-  margin-top: 54px;
-  margin-bottom: 54px;
-  padding: 35px 50px;
-
-  box-sizing: border-box;
+  top: 50%;
+  left: 21%;
+  transform: translate(-50%,-50%);
+  z-index: 9980;
+  width: 319px;
+  padding: 51px 50px 47px 47px;
   background-color: #fff;
 }
 .information__title {
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 23px;
 
   font-size: 18px;
-  font-weight: bold;
-  line-height: 1.67;
+  font-weight: 700;
+  line-height: 30px;
   text-transform: uppercase;
-  color: #000;
+  color: #000000;
 }
+
 .information__addr,
 .information__tel {
-  margin-bottom: 20px;
+  margin: 0;
 
-  line-height: 1.13;
+  font-size: 16px;
+  line-height: 18px;
   color: #666666;
+}
+.information__addr {
+  width: 96%;
+  margin-bottom: 17px;
 }
 .information__tel a {
   color: inherit;
 }
+.information__tel {
+  margin-bottom: 38px;
+}
+
 .information__button {
   width: 100%;
-  margin-top: 17px;
-  padding-left: 0;
-  padding-right: 0;
-
-  text-align: center;
-
-  background-color: #fb565a;
-}
-.information__button:active {
-  background-color: #d7373b;
 }
 .footer__map {
   width: 100%;
-  min-height: 430px;
+  min-height: 416px;
 }
 
 .social {
-  padding: 45px 0;
+  padding: 69px 0;
 }
 .social .container {
   display: flex;
@@ -620,17 +655,17 @@ a {
   opacity: 0.3;
 }
 .social__text {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   margin-left: 127px;
-
+  padding-top: 7px;
   font-size: 36px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 36px;
   color: #000000;
 }
 .social__text span {
-  display: inline-block;
+  display: block;
+  margin-top: 10px;
 
   font-size: 16px;
   font-weight: normal;
@@ -1063,13 +1098,14 @@ a {
 /* Стили попапа (начало) */
 .popup {
   position: fixed;
+  left: 50%;
   bottom: 180px;
+  transform: translateX(-50%);
   z-index: 9999;
 
   display: none;
   width: 100%;
   max-width: 960px;
-  margin: 0 25%;
   padding: 73px 100px;
 
   box-sizing: border-box;
@@ -1082,16 +1118,13 @@ a {
 
 .popup__title {
   margin: 0;
-
+  margin-bottom: 50px;
   font-size: 45px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 45px;
   color: #000000;
 }
 
-.popup__form {
-  margin-top: 50px;
-}
 .popup__group {
   display: flex;
   justify-content: space-between;
@@ -1106,9 +1139,9 @@ a {
 .popup__label {
   width: 100%;
   max-width: 360px;
-
+  margin-bottom: 12px;
   font-weight: bold;
-  line-height: 1.13;
+  line-height: 18px;
   color: #000000;
 }
 .popup__imput {
@@ -1126,16 +1159,13 @@ a {
   height: 118px;
   margin-top: 12px;
   padding: 15px;
-
+  margin-bottom: 47px;
   border: solid 2px #d7dcde;
 
   resize: none;
 }
 .popup__submit {
-  margin-top: 47px;
-
-  background-color: #fb565a;
-  border: none;
+  width: 260px;
 }
 .popup__close {
   position: absolute;
@@ -1144,6 +1174,7 @@ a {
 
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 .popup__close svg {
   opacity: 0.3;
