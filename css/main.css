@@ -702,13 +702,16 @@ img {
   list-style: none;
 }
 
-
-.group {
+.filter__form .group {
   border: none;
   padding: 0;
   margin: 0;
   margin-bottom: 52px;
 }
+
+/* .filter__form .group:last-child {
+  margin: 0;    почему не работает???
+} */
 
 .group__title {
   margin: 0;
@@ -721,10 +724,13 @@ img {
   text-transform: uppercase;
   color: #000000;
 }
+
 .group__item {
   margin-bottom: 15px;
 }
-
+.group__list .group__item:last-child {
+  margin-bottom: 0;
+}
 /* Фильтр цены(начало) */
 .group__title--range {
   margin-bottom: 48px;
@@ -825,26 +831,50 @@ img {
   padding-left: 50px;
   cursor: pointer;
 }
+
+.filter__radio:disabled + .filter__label {
+  cursor: default;
+}
+
 .filter__radio + .filter__label::before {
   content: "";
   position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
   width: 25px;
   height: 25px;
-  left: 0;
+
+  border: 2px solid #4d4d4d;
+  border-radius: 50%;
+  opacity: 0.4;
+  transition: all 0.3s;
+}
+
+.filter__radio:checked + .filter__label::after {
+  content: "";
+  position: absolute;
   top: 50%;
+  left: 8.3px;
   transform: translateY(-50%);
-  opacity: 0.5;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background-color: #4d4d4d;
+  opacity: 0.4;
+  transition: all 0.3s;
 }
-.filter__radio:not(:checked) + .filter__label::before {
-  content: url(../img/catalog/radio-off.svg);
-}
-.filter__radio:checked + .filter__label::before {
-  content: url(../img/catalog/radio-on.svg);
-}
-.filter__radio + .filter__label:hover::before,
-.filter__radio:focus + .filter__label::before {
+
+.filter__radio:not(:disabled) + .filter__label:hover::before,
+.filter__radio:not(:disabled):focus + .filter__label::before,
+.filter__radio:not(:disabled) + .filter__label:hover::after,
+.filter__radio:not(:disabled):focus + .filter__label::after {
   opacity: 1;
 }
+
 .filter__radio:disabled + .filter__label {
   opacity: 0.3;
 }
@@ -856,24 +886,46 @@ img {
   padding-left: 50px;
   cursor: pointer;
 }
+.filter__checkbox:disabled + .filter__label {
+  cursor: default;
+}
 .filter__checkbox + .filter__label::before {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
-  left: 0;
   top: 50%;
+  left: 0px;
   transform: translateY(-50%);
-  opacity: 0.5;
+
+  width: 23px;
+  height: 23px;
+
+  border: 2px solid #4d4d4d;
+  border-radius: 5px;
+
+  opacity: 0.4;
 }
-.filter__checkbox:not(:checked) + .filter__label::before {
-  content: url(../img/catalog/checkbox-off.svg);
+
+.filter__checkbox:checked + .filter__label::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: -5px;
+  transform: translateY(-50%);
+
+  width: 11px;
+  height: 22px;
+  border-right: 4px solid #4d4d4d;
+  border-bottom: 4px solid #4d4d4d;
+  transform: rotate(45deg);
+  box-shadow: 2px 0 0 0 white, inset -2px 0 0 0 white;
+
+  opacity: 0.4;
 }
-.filter__checkbox:checked + .filter__label::before {
-  content: url(../img/catalog/checkbox-on.svg);
-}
-.filter__checkbox + .filter__label:hover::before,
-.filter__checkbox:focus + .filter__label::before {
+
+.filter__checkbox:not(:disabled) + .filter__label:hover::before,
+.filter__checkbox:not(:disabled):focus + .filter__label::before,
+.filter__checkbox:not(:disabled) + .filter__label:hover::after,
+.filter__checkbox:not(:disabled):focus + .filter__label::after {
   opacity: 1;
 }
 .filter__checkbox:disabled + .filter__label {
@@ -1048,8 +1100,6 @@ img {
   background-color: #d7373b;
 }
 
-.catalog__navigation {
-}
 .catalog__navigation .navigation {
   display: flex;
   margin: 0;
