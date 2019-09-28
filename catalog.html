@@ -16,11 +16,11 @@
           </a>
           <ul class="nav__list nav__list--main">
             <li class="nav__item">
-              <a class="nav__link active" href="#">Студия</a>
+              <a class="nav__link" href="#">Студия</a>
             </li>
 
             <li class="nav__item">
-              <a class="nav__link active" href="#">Клиенты</a>
+              <a class="nav__link" href="#">Клиенты</a>
             </li>
 
             <li class="nav__item">
@@ -28,12 +28,12 @@
             </li>
 
             <li class="nav__item">
-              <a class="nav__link active" href="#">Контакты</a>
+              <a class="nav__link" href="#">Контакты</a>
             </li>
           </ul>
           <ul class="nav__list nav__list--secodary">
             <li class="nav__item">
-              <a class="nav__link nav__link--basket active" href="#">Корзина</a>
+              <a class="nav__link nav__link--basket" href="#">Корзина</a>
             </li>
           </ul>
 
@@ -69,18 +69,34 @@
 
             <ul class="group__list">
               <li class="group__item">
-                <input class="filter__radio visually-hidden" id="adaptive" type="radio" name="radio" checked="checked" />
+                <input
+                  class="filter__radio visually-hidden"
+                  id="adaptive"
+                  type="radio"
+                  name="grid"
+                  value="adaptive"
+                  checked="checked" />
                 <label class="filter__label" for="adaptive">Адаптивная</label>
               </li>
 
               <li class="group__item">
-                <input class="filter__radio visually-hidden" id="fix" type="radio" name="radio"/>
-                <label class="filter__label" for="fix">Фиксированная</label>
+                <input
+                  class="filter__radio visually-hidden"
+                  id="fixed"
+                  type="radio"
+                  name="grid"
+                  value="fixed"/>
+                <label class="filter__label" for="fixed">Фиксированная</label>
               </li>
 
               <li class="group__item">
-                <input class="filter__radio visually-hidden" id="rez" type="radio" name="radio"/>
-                <label class="filter__label" for="rez">Резиновая</label>
+                <input
+                  class="filter__radio visually-hidden"
+                  id="rubber"
+                  type="radio"
+                  name="grid"
+                  value="rubber"/>
+                <label class="filter__label" for="rubber">Резиновая</label>
               </li>
             </ul>
           </fieldset>
@@ -90,27 +106,54 @@
 
             <ul class="group__list">
               <li class="group__item">
-                <input class="visually-hidden" type="checkbox" id="check-slider" checked/>
+                <input
+                  class="filter__checkbox visually-hidden"
+                  id="check-slider"
+                  type="checkbox"
+                  name="features"
+                  value="slider"
+                  checked/>
                 <label class="filter__label" for="check-slider">Слайдер</label>
               </li>
 
               <li class="group__item">
-                <input class="visually-hidden" type="checkbox" id="check-advantages"/>
+                <input
+                  class="filter__checkbox visually-hidden"
+                  id="check-advantages"
+                  type="checkbox"
+                  name="features"
+                  value="advantages"/>
                 <label class="filter__label" for="check-advantages">Блок преимуществ</label>
               </li>
 
               <li class="group__item">
-                <input class="visually-hidden" type="checkbox" id="check-news" checked/>
+                <input
+                  class="filter__checkbox visually-hidden"
+                  id="check-news"
+                  type="checkbox"
+                  name="features"
+                  value="news"
+                  checked/>
                 <label class="filter__label" for="check-news">Новости</label>
               </li>
 
               <li class="group__item">
-                <input class="visually-hidden" type="checkbox" id="check-gallery"/>
+                <input
+                  class="filter__checkbox visually-hidden"
+                  id="check-gallery"
+                  type="checkbox"
+                  name="features"
+                  value="gallery"/>
                 <label class="filter__label" for="check-gallery">Галерея</label>
               </li>
 
               <li class="group__item">
-                <input class="visually-hidden" type="checkbox" id="check-basket"/>
+                <input
+                  class="filter__checkbox visually-hidden"
+                  id="check-basket"
+                  type="checkbox"
+                  name="features"
+                  value="basket"/>
                 <label class="filter__label" for="check-basket">Корзина</label>
               </li>
             </ul>
@@ -139,15 +182,13 @@
             <li class="sorting__item">
               <a class="sorting__value" href="">По названию</a>
             </li>
-            <li class="sorting__item  sorting__item--range">
-              <a class="sorting__range" href="#" aria-label="Меньше">
+            <li class="sorting__item sorting__item--range">
+              <a class="sorting__value" href="#" aria-label="Меньше">
                 <svg class="sorting__icon sorting__icon--down" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                   <path fill="#231F20" d="M5.5 10L0 0h11"/>
                 </svg>
               </a>
-            </li>
-            <li class="sorting__item sorting__item--range sorting__item--range-up">
-              <a class="sorting__range" href="#" aria-label="Больше">
+              <a class="sorting__value" href="#" aria-label="Больше">
                 <svg class="sorting__icon sorting__icon--up" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                   <path fill="#231F20" d="M5.5 10L0 0h11"/>
                 </svg>

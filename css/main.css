@@ -75,7 +75,7 @@ img {
 
 .button {
   display: block;
-  padding: 15px 0;
+  padding: 16px 0;
 
   font-size: 16px;
   line-height: 18px;
@@ -197,7 +197,7 @@ img {
   display: block;
   text-align: center;
 
-  padding: 14px 0 0;
+  padding: 15px 0 3px;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
@@ -345,7 +345,7 @@ img {
 .slide__text {
   max-width: 430px;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 41px;
 }
 
 .slide__btn {
@@ -391,11 +391,11 @@ img {
   margin-right: 0;
 }
 .advantage__img {
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 }
 .advantage__title {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
@@ -454,7 +454,7 @@ img {
 }
 .about__item {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   padding-left: 36px;
 }
 .about__item::before {
@@ -725,7 +725,7 @@ img {
   margin-bottom: 15px;
 }
 
-/* Фильтр цены( начало ) */
+/* Фильтр цены(начало) */
 .group__title--range {
   margin-bottom: 48px;
 }
@@ -817,14 +817,13 @@ img {
 .max-price {
   text-align: right;
 }
-/* Фильтр цены( конец ) */
+/* Фильтр цены(конец) */
 
-/* Фильтр сетка ( начало ) */
+/* Фильтр сетка (начало) */
 .filter__radio + .filter__label {
   position: relative;
   padding-left: 50px;
   cursor: pointer;
-  opacity: 0.5;
 }
 .filter__radio + .filter__label::before {
   content: "";
@@ -834,6 +833,7 @@ img {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  opacity: 0.5;
 }
 .filter__radio:not(:checked) + .filter__label::before {
   content: url(../img/catalog/radio-off.svg);
@@ -841,68 +841,47 @@ img {
 .filter__radio:checked + .filter__label::before {
   content: url(../img/catalog/radio-on.svg);
 }
-.filter__radio + .filter__label:hover {
+.filter__radio + .filter__label:hover::before,
+.filter__radio:focus + .filter__label::before {
   opacity: 1;
 }
 .filter__radio:disabled + .filter__label {
   opacity: 0.3;
 }
-/* Фильтр сетка ( конец ) */
+/* Фильтр сетка (конец) */
 
-.filter__checkbox:not(:checked) + .filter__label,
-.filter__checkbox:checked + .filter__label {
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    margin-bottom: 17px;
-    display: inline-block;
-    font-size: 16px;
-    opacity: 0.4;
+/* Фильтр особенности (начало) */
+.filter__checkbox + .filter__label {
+  position: relative;
+  padding-left: 50px;
+  cursor: pointer;
 }
-.filter__checkbox:not(:checked):hover + .filter__label:hover,
-.filter__checkbox:checked:hover + .filter__label:hover,
-.filter__checkbox:not(:checked):focus + .filter__label,
-.filter__checkbox:checked:focus + .filter__label{
+.filter__checkbox + .filter__label::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+.filter__checkbox:not(:checked) + .filter__label::before {
+  content: url(../img/catalog/checkbox-off.svg);
+}
+.filter__checkbox:checked + .filter__label::before {
+  content: url(../img/catalog/checkbox-on.svg);
+}
+.filter__checkbox + .filter__label:hover::before,
+.filter__checkbox:focus + .filter__label::before {
   opacity: 1;
 }
-
-.filter__checkbox:not(:checked) + .filter__label:before,
-.filter__checkbox:checked + .filter__label:before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 23px;
-    height: 23px;
-    border: 2px solid #4d4d4d;
-    border-radius: 4px;
+.filter__checkbox:disabled + .filter__label {
+  opacity: 0.3;
 }
+/* Фильтр особенности (начало) */
 
-.filter__checkbox:not(:checked) + .filter__label:after,
-.filter__checkbox:checked + .filter__label:after {
-    content: '✔';
-    position: absolute;
-    top: -5px; left: 7px;
-    font-size: 25px;
-    line-height: 1.2;
-    color: #4d4d4d;
-    transition: all .2s;
-}
-
-.filter__checkbox:not(:checked) + .filter__label:after {
-    opacity: 0;
-    transform: scale(0);
-}
-.filter__checkbox:checked + .filter__label:after {
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.filter__checkbox:disabled:not(:checked) + .filter__label:before,
-.filter__checkbox:disabled:checked + .filter__label:before {
-    opacity: 0.3;
-}
-
+/* Фильтр кнопка (начало) */
 .filter__button {
   width: 100%;
   border: none;
@@ -910,15 +889,18 @@ img {
   color: #000000;
   cursor: pointer;
 }
+
 .filter__button:hover,
 .filter__button:focus{
   background-color: #dfdfdf;
 }
+
 .filter__button:active {
   color: rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #d5d5d5;
 }
+/* Фильтр кнопка (конец) */
 
 
 .catalog {
@@ -927,18 +909,12 @@ img {
   flex-basis: 760px;
 }
 
-.catalog ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .sorting {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 59px;
   text-transform: uppercase;
 }
 
@@ -948,17 +924,25 @@ img {
 
 .sorting__group {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
   font-size: 14px;
 }
-.sorting__item {
-  margin-left: 26px;
+.sorting__item .sorting__value {
+  margin-right: 26px;
   opacity: 0.3;
 }
-.sorting__item:hover {
+.sorting__item:last-child .sorting__value {
+  margin-right: 0;
+}
+.sorting__item .sorting__value:hover,
+.sorting__item .sorting__value:focus{
   opacity: 0.6;
 }
-.sorting__item:active,
-.sorting__item.active {
+.sorting__item .sorting__value:active ,
+.sorting__item.active .sorting__value {
   opacity: 1;
 }
 
@@ -966,15 +950,21 @@ img {
   margin-left: 48px;
 }
 
-.sorting__item--range-up {
+.sorting__icon--up {
   margin-left: 18px;
-  transform: rotate(180deg)
+  transform: rotate(180deg);
 }
 
 .products__list {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+
+  list-style: none;
+
 }
 .product {
   position: relative;
@@ -982,8 +972,10 @@ img {
   width: 100%;
   max-width: 360px;
   flex-basis: 360px;
-  margin-top: 63px;
+  height: 100%;
   text-align: center;
+  margin-bottom: 33px;
+  padding-top: 40px;
 }
 .product:hover .product__card,
 .product:focus .product__card {
@@ -1000,7 +992,7 @@ img {
 .product::before {
   content: url(../img/catalog/browser.png);
   position: absolute;
-  top: -39px;
+  top: 0;
   z-index: 1;
   opacity: 0.12;
   transition: opacity 0.3s;
@@ -1057,10 +1049,14 @@ img {
 }
 
 .catalog__navigation {
-  margin-top: 60px;
 }
 .catalog__navigation .navigation {
   display: flex;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+
+  list-style: none;
 }
 .navigation .navigation__link {
   display: block;
@@ -1075,12 +1071,12 @@ img {
   background-color: #eeeeee;
 }
 
-.navigation__link:hover,
-.navigation__link:focus {
+.navigation__link:not(.active):hover,
+.navigation__link:not(.active):focus {
   background-color: #dfdfdf;
 
 }
-.navigation__link:active {
+.navigation__link:not(.active):active {
   color: rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #d5d5d5;
@@ -1088,6 +1084,7 @@ img {
 
 .navigation__link.active {
   background-color: #fff;
+  cursor: default;
 }
 
 .navigation__link.navigation__link--next {
