@@ -382,18 +382,19 @@ img {
 
 .advantages__list {
   display: flex;
+  flex-flow: row wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   list-style: none;
 }
 
 .advantages__item {
   flex-shrink: 0;
   flex-basis: 300px;
-  margin: 0 100px 0 0;
+  margin: 0 100px 20px 0;
 }
-.advantages__item:last-child {
+.advantages__item:nth-child(3n) {
   margin-right: 0;
 }
 .advantage__img {
@@ -490,6 +491,7 @@ img {
 }
 .indicators__list {
   display: flex;
+  flex-flow: row wrap;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -527,6 +529,7 @@ img {
 }
 .partners__list {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -537,10 +540,10 @@ img {
   position: relative;
   width: 100%;
   flex-basis: 210px;
-  padding: 0 45px;
+  padding: 0 40px;
   box-sizing: content-box;
 }
-.partners__item:not(:last-child)::after {
+.partners__item:not(:nth-child(4n))::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -987,6 +990,7 @@ img {
 
 .sorting__group {
   display: flex;
+  flex-flow: row wrap;
   margin: 0;
   padding: 0;
   list-style: none;
