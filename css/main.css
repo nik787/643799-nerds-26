@@ -1100,7 +1100,7 @@ img {
   background-color: #d7373b;
 }
 
-.catalog__navigation .navigation {
+.catalog__pagination .pagination {
   display: flex;
   margin: 0;
   margin-bottom: 60px;
@@ -1108,7 +1108,7 @@ img {
 
   list-style: none;
 }
-.navigation .navigation__link {
+.pagination .pagination__link {
   display: block;
   padding: 20px;
   margin: 0 10px 0 0;
@@ -1121,23 +1121,23 @@ img {
   background-color: #eeeeee;
 }
 
-.navigation__link:not(.active):hover,
-.navigation__link:not(.active):focus {
+.pagination__link:not(.active):hover,
+.pagination__link:not(.active):focus {
   background-color: #dfdfdf;
 
 }
-.navigation__link:not(.active):active {
+.pagination__link:not(.active):active {
   color: rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #d5d5d5;
 }
 
-.navigation__link.active {
+.pagination__link.active {
   background-color: #fff;
   cursor: default;
 }
 
-.navigation__link.navigation__link--next {
+.pagination__link.pagination__link--next {
   padding: 20px 78px;
 }
 /* Стили страницы каталога (конец) */
