@@ -30,7 +30,7 @@ function closePopup(e) {
 
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
-          center: [59.938845, 30.321265],
+          center: [59.938872, 30.322617],
           zoom: 18,
           controls: [],
           type: 'yandex#map',
