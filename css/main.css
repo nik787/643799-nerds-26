@@ -1,27 +1,32 @@
 @font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto-Regular.eot');
-	src: local('Roboto'),url('../fonts/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto-Regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto";
+
+  src: url("../fonts/Roboto-Regular.woff2");
+  src: local("Roboto"), url("../fonts/Roboto-Regular.woff") format("woff");
 }
 @font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto-Medium.eot');
-	src: local('Roboto'),url('../fonts/Roboto-Medium.woff2') format('woff2'), url('../fonts/Roboto-Medium.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto";
+
+  src: url("../fonts/Roboto-Medium.woff2");
+  src: local("Roboto"), url("../fonts/Roboto-Medium.woff") format("woff");
 }
 @font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto-Bold.eot');
-	src: local('Roboto'),url('../fonts/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto-Bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Roboto";
+
+  src: url("../fonts/Roboto-Bold.woff2");
+  src: local("Roboto"), url("../fonts/Roboto-Bold.woff") format("woff");
 }
 
 /* Базовые стили (начало) */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -30,13 +35,15 @@ html {
 }
 
 body {
+  width: 100%;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
 
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: #283136;
 }
 
@@ -46,9 +53,9 @@ a {
 }
 
 img {
+  box-sizing: content-box;
   width: 100%;
   height: auto;
-  box-sizing: content-box;
 }
 
 
@@ -66,11 +73,11 @@ img {
   height: 1px;
   margin: -1px;
   padding: 0;
+  overflow: hidden;
 
   border: 0;
 
   clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .button {
@@ -79,23 +86,23 @@ img {
 
   font-size: 16px;
   line-height: 18px;
+  text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  text-align: center;
   text-decoration: none;
 
   background-color: #fb565a;
-  border-radius: 3px;
   border: none;
+  border-radius: 3px;
+  cursor: pointer;
 
   transition: all 0.3s;
-  cursor: pointer;
 }
 
 .button:active {
   color: rgba(255, 255, 255, 0.3);
 
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .button--red {
@@ -109,7 +116,7 @@ img {
 
 .button--red:active {
   background-color: #d7373b;
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .button--green {
@@ -123,7 +130,7 @@ img {
 
 .button--green:active {
   background-color: #00aa62;
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .button--yellow {
@@ -137,8 +144,7 @@ img {
 
 .button--yellow:active {
   background-color: #e5a722;
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
-
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 /* Базовые стили (конец) */
 
@@ -170,8 +176,9 @@ img {
 .nav__list {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -197,13 +204,13 @@ img {
   position: relative;
 
   display: block;
-  text-align: center;
-
   padding: 15px 0 3px;
+
   font-weight: 500;
   line-height: 30px;
+  text-align: center;
+  color: #000000;
   text-transform: uppercase;
-  color: #000;
 }
 
 .nav__link:hover,
@@ -222,9 +229,11 @@ img {
 
 .nav__link--basket::before {
   content: url(../img/basket-icon.svg);
+
   width: 15px;
   height: 15px;
   margin-right: 26px;
+
   opacity: 0.4;
   /* content: "";
   position: absolute;
@@ -235,21 +244,23 @@ img {
 /* Стили секции slider (начало) */
 .slider {
   position: relative;
-  border-top: 1px solid transparent;
+
   background-color: #eeeeee;
+  border-top: 1px solid transparent;
 }
 
 .slider__navigation {
   position: absolute;
-  left: 50%;
   bottom: 103px;
+  left: 50%;
   z-index: 100;
 
   width: 160px;
   height: 18px;
 
-  text-align: center;
   font-size: 0;
+  text-align: center;
+
   transform: translateX(-50%);
 }
 
@@ -268,7 +279,6 @@ img {
 
 .slider__navigation .dot::after {
   content: "";
-
   position: absolute;
   top: 8px;
   left: 8px;
@@ -278,13 +288,13 @@ img {
   height: 18px;
 
   background: #ffffff;
-
   border-radius: 50%;
 }
 
 .slider__list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -328,12 +338,14 @@ img {
 #product-3:checked ~ .slider__navigation .dot--3::before {
   content: "";
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   z-index: 2;
+
   width: 4px;
   height: 4px;
   margin: -4px;
+
   background-color: inherit;
   border: 2px solid #c1c1c1;
   border-radius: 50%;
@@ -343,10 +355,10 @@ img {
   margin: 0;
   margin-bottom: 27px;
 
+  font-weight: 500;
   font-size: 55px;
   line-height: 55px;
-  font-weight: 500;
-  color: #000;
+  color: #000000;
 }
 
 .slide__text {
@@ -357,7 +369,6 @@ img {
 
 .slide__btn {
   width: 240px;
-
 }
 
 
@@ -367,8 +378,9 @@ img {
 }
 
 .slide__btn:active {
-  background-color: #d7373b;
   color: rgba(255, 255, 255, 0.3);
+
+  background-color: #d7373b;
   box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 /* Стили секции slider (конец) */
@@ -376,16 +388,17 @@ img {
 /* Стили секции advantages (начало) */
 .advantages {
   padding-top: 80px;
-  border-bottom: 2px solid #efefef;
 
+  border-bottom: 2px solid #efefef;
 }
 
 .advantages__list {
   display: flex;
   flex-flow: row wrap;
   margin: 0;
-  padding: 0;
   margin-bottom: 60px;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -403,11 +416,12 @@ img {
 .advantage__title {
   margin: 0;
   margin-bottom: 18px;
-  font-size: 24px;
+
   font-weight: bold;
-  text-transform: uppercase;
+  font-size: 24px;
   line-height: 1.25;
-  color: #000;
+  color: #000000;
+  text-transform: uppercase;
 }
 .advantage__text {
   width: 260px;
@@ -423,24 +437,24 @@ img {
 .studio {
   display: flex;
   justify-content: space-between;
-
   padding-top: 40px;
   padding-bottom: 49px;
 
   border-bottom: 2px solid #efefef;
 }
 .about {
-  width: 100%;
   flex-basis: 650px;
+  width: 100%;
   padding-top: 35px;
 }
 .about__slogan {
   margin: 0;
   margin-bottom: 34px;
-  font-size: 45px;
+
   font-weight: 500;
+  font-size: 45px;
   line-height: 45px;
-  color: #000;
+  color: #000000;
 }
 .about__subtitle {
   margin-top: 0;
@@ -449,34 +463,38 @@ img {
 .about__title {
   margin: 0;
   margin-bottom: 24px;
+
   font-weight: 700;
-  text-transform: uppercase;
   color: #000000;
+  text-transform: uppercase;
 }
 .about__list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 .about__item {
   position: relative;
+
   margin-bottom: 25px;
   padding-left: 36px;
 }
 .about__item::before {
   content: "";
   position: absolute;
+  top: 50%;
+  left: 0;
+
   display: block;
   width: 25px;
   height: 2px;
-  top: 50%;
-  left: 0;
 
   background: #d7373b;
 }
 .indicators {
-  width: 100%;
   flex-basis: 360px;
+  width: 100%;
 }
 .indicators__logo {
   margin-bottom: 30px;
@@ -484,26 +502,29 @@ img {
 .indicators__title {
   margin: 0;
   margin-bottom: 29px;
-  text-align: center;
+
   font-weight: bold;
+  text-align: center;
+  color: #000000;
   text-transform: uppercase;
-  color: #000;
 }
 .indicators__list {
   display: flex;
   flex-flow: row wrap;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 .indicators__item {
   width: 105px;
   margin-right: 14px;
-  text-align: left;
-  font-size: 45px;
+
   font-weight: 700;
+  font-size: 45px;
   font-family: "Roboto";
-  color: #000;
+  text-align: left;
+  color: #000000;
 }
 .indicators__item .percent {
   font-size: 26px;
@@ -512,8 +533,8 @@ img {
   display: block;
   margin-top: 10px;
 
-  font-size: 16px;
   font-weight: normal;
+  font-size: 16px;
   line-height: 1.13;
   color: #283136;
 }
@@ -521,8 +542,8 @@ img {
 
 /* Стили секции partners (начало) */
 .partners {
-  padding: 45px 0 0;
   margin-bottom: 60px;
+  padding: 45px 0 0;
   padding-bottom: 49px;
 
   border-bottom: 2px solid #efefef;
@@ -538,24 +559,28 @@ img {
 }
 .partners__item {
   position: relative;
-  width: 100%;
+
   flex-basis: 210px;
-  padding: 0 40px;
   box-sizing: content-box;
+  width: 100%;
+  padding: 0 40px;
 }
 .partners__item:not(:nth-child(4n))::after {
   content: "";
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   right: 0;
+
   width: 2px;
   height: 52px;
+
   background-color: #cccccc;
+  transform: translateY(-50%);
   opacity: 0.3;
 }
 .partner {
   opacity: 0.2;
+
   transition: opacity 0.3s;
 }
 
@@ -576,26 +601,28 @@ img {
 .information {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   z-index: 9980;
+
   width: 319px;
   /* padding: 51px 50px 47px 50px; */
   padding: 0;
   padding-top: 55px;
-  padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 50px;
-  background-color: #fff;
+  padding-left: 50px;
+
+  background-color: #ffffff;
+  transform: translateY(-50%);
 }
 .information__title {
   margin: 0;
   margin-bottom: 23px;
 
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 30px;
-  text-transform: uppercase;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .information__addr,
@@ -624,6 +651,11 @@ img {
 .footer__map {
   width: 100%;
   min-height: 416px;
+
+  background-image: url(../img/map-marker.png) ,url(../img/map.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom 30% right 36%, center;
+  background-size: 10%, cover;
 }
 
 .social {
@@ -635,8 +667,8 @@ img {
   display: flex;
   flex-basis: 246px;
   align-items: center;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   list-style: none;
 }
@@ -649,8 +681,8 @@ img {
   margin-right: 12px;
   padding: 0;
 
-  border-radius: 50%;
   background: #e1e1e1;
+  border-radius: 50%;
 }
 .social__button:hover,
 .social__button:focus {
@@ -666,8 +698,9 @@ img {
   margin: 0;
   margin-left: 127px;
   padding-top: 7px;
-  font-size: 36px;
+
   font-weight: bold;
+  font-size: 36px;
   line-height: 36px;
   color: #000000;
 }
@@ -675,8 +708,8 @@ img {
   display: block;
   margin-top: 12px;
 
-  font-size: 16px;
   font-weight: normal;
+  font-size: 16px;
   line-height: 1.38;
   color: #444444;
 }
@@ -686,11 +719,12 @@ img {
 /* Стили страницы каталога (начало) */
 .catalog-page .header__title {
   margin: 72px 0 105px;
-  font-size: 55px;
+
   font-weight: 500;
+  font-size: 55px;
   line-height: 1;
   text-align: center;
-  color: #000;
+  color: #000000;
 }
 .catalog-page__inner {
   display: flex;
@@ -699,22 +733,24 @@ img {
 }
 
 .filter {
+  flex-basis: 261px;
   width: 100%;
   max-width: 261px;
-  flex-basis: 261px;
 }
 
 .filter ul {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .filter__form .group {
-  border: none;
-  padding: 0;
   margin: 0;
   margin-bottom: 52px;
+  padding: 0;
+
+  border: none;
 }
 
 .group.group--grid {
@@ -722,18 +758,17 @@ img {
 }
 .group.group--features {
   margin-bottom: 46px;
-
 }
 
 .group__title {
   margin: 0;
   margin-bottom: 15px;
 
-  font-size: 18px;
   font-weight: bold;
+  font-size: 18px;
   line-height: 1.67;
-  text-transform: uppercase;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .group__item {
@@ -745,8 +780,8 @@ img {
 /* Фильтр цены(начало) */
 .group__title--range {
   margin-bottom: 48px;
-  letter-spacing: 0.5px;
 
+  letter-spacing: 0.5px;
 }
 
 .range-filter {
@@ -759,12 +794,11 @@ img {
   height: 41px;
   margin-bottom: 14px;
   padding-top: 39px;
-  padding-bottom: 39px;
   padding-right: 20px;
+  padding-bottom: 39px;
   padding-left: 20px;
 
   background-color: #f1f1f1;
-
   border-radius: 5px;
 }
 
@@ -776,6 +810,7 @@ img {
 
 .range-controls .bar {
   position: relative;
+
   width: 73%;
   height: 2px;
 
@@ -784,21 +819,22 @@ img {
 }
 
 .bar .toggle {
-  box-sizing: content-box;
   position: absolute;
   top: -8px;
+
+  box-sizing: content-box;
   width: 4px;
   height: 4px;
   padding: 0;
 
-  border: 8px solid #ffffff;
   background-color: #ababab;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border: 8px solid #ffffff;
   border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
 }
 
 .range-controls .toggle-min {
-  left: 0px;
+  left: 0;
 }
 
 .range-controls .toggle-max {
@@ -813,24 +849,24 @@ img {
   display: inline-block;
   width: 50%;
 
-  vertical-align: middle;
   font-size: 16px;
+  vertical-align: middle;
   text-transform: uppercase;
 }
 
 .price-controls input {
   width: 80px;
-  padding: 12px 16px;
   margin-left: 10px;
+  padding: 12px 16px;
 
-  font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
+  font-family: Roboto, Arial, sans-serif;
   text-align: center;
   color: #283136;
 
+  background: #f1f1f1;
   border: none;
   border-radius: 5px;
-  background: #f1f1f1;
 }
 
 .max-price {
@@ -841,7 +877,9 @@ img {
 /* Фильтр сетка (начало) */
 .filter__radio + .filter__label {
   position: relative;
+
   padding-left: 37px;
+
   cursor: pointer;
 }
 
@@ -854,14 +892,15 @@ img {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
 
   width: 25px;
   height: 25px;
 
   border: 2px solid #4d4d4d;
   border-radius: 50%;
+  transform: translateY(-50%);
   opacity: 0.4;
+
   transition: all 0.3s;
 }
 
@@ -870,14 +909,15 @@ img {
   position: absolute;
   top: 50%;
   left: 8.3px;
-  transform: translateY(-50%);
 
   width: 9px;
   height: 9px;
 
-  border-radius: 50%;
   background-color: #4d4d4d;
+  border-radius: 50%;
+  transform: translateY(-50%);
   opacity: 0.4;
+
   transition: all 0.3s;
 }
 
@@ -896,7 +936,9 @@ img {
 /* Фильтр особенности (начало) */
 .filter__checkbox + .filter__label {
   position: relative;
+
   padding-left: 37px;
+
   cursor: pointer;
 }
 .filter__checkbox:disabled + .filter__label {
@@ -906,32 +948,31 @@ img {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0px;
-  transform: translateY(-50%);
+  left: 0;
 
   width: 23px;
   height: 23px;
 
   border: 2px solid #4d4d4d;
   border-radius: 5px;
-
+  transform: translateY(-50%);
   opacity: 0.4;
 }
 
 .filter__checkbox:checked + .filter__label::after {
   content: "";
   position: absolute;
-  left: 12px;
   top: -5px;
-  transform: translateY(-50%);
+  left: 12px;
 
   width: 11px;
   height: 22px;
+
   border-right: 4px solid #4d4d4d;
   border-bottom: 4px solid #4d4d4d;
-  transform: rotate(45deg);
   box-shadow: 2px 0 0 0 white, inset -2px 0 0 0 white;
-
+  transform: translateY(-50%);
+  transform: rotate(45deg);
   opacity: 0.4;
 }
 
@@ -949,42 +990,47 @@ img {
 /* Фильтр кнопка (начало) */
 .filter__button {
   width: 100%;
-  border: none;
-  background-color: #eeeeee;
+
   color: #000000;
+
+  background-color: #eeeeee;
+  border: none;
   cursor: pointer;
 }
 
 .filter__button:hover,
-.filter__button:focus{
+.filter__button:focus {
   background-color: #dfdfdf;
 }
 
 .filter__button:active {
   color: rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+
   background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 /* Фильтр кнопка (конец) */
 
 
 .catalog {
+  flex-basis: 760px;
   width: 100%;
   max-width: 760px;
-  flex-basis: 760px;
 }
 
 .sorting {
   display: flex;
-  justify-content: space-between;
   flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 52px;
+
   text-transform: uppercase;
 }
 
 .sorting__title {
   margin: 0;
+
   letter-spacing: -0.5px;
 }
 
@@ -993,22 +1039,23 @@ img {
   flex-flow: row wrap;
   margin: 0;
   padding: 0;
-  list-style: none;
 
+  list-style: none;
   font-size: 14px;
 }
 .sorting__item .sorting__value {
   margin-right: 26px;
+
   opacity: 0.3;
 }
 .sorting__item:last-child .sorting__value {
   margin-right: 0;
 }
 .sorting__item .sorting__value:hover,
-.sorting__item .sorting__value:focus{
+.sorting__item .sorting__value:focus {
   opacity: 0.6;
 }
-.sorting__item .sorting__value:active ,
+.sorting__item .sorting__value:active,
 .sorting__item.active .sorting__value {
   opacity: 1;
 }
@@ -1019,6 +1066,7 @@ img {
 
 .sorting__icon--up {
   margin-left: 18px;
+
   transform: rotate(180deg);
 }
 
@@ -1031,18 +1079,18 @@ img {
   padding: 0;
 
   list-style: none;
-
 }
 .product {
   position: relative;
 
+  flex-basis: 360px;
   width: 100%;
   max-width: 360px;
-  flex-basis: 360px;
   height: 100%;
-  text-align: center;
   margin-bottom: 26px;
   padding-top: 40px;
+
+  text-align: center;
 }
 .product:hover .product__card,
 .product:focus .product__card {
@@ -1052,8 +1100,9 @@ img {
   opacity: 1;
 }
 .product__img {
-  width: 100%;
   position: relative;
+
+  width: 100%;
 }
 
 .product::before {
@@ -1061,7 +1110,9 @@ img {
   position: absolute;
   top: 0;
   z-index: 1;
+
   opacity: 0.12;
+
   transition: opacity 0.3s;
 }
 
@@ -1069,19 +1120,23 @@ img {
   position: absolute;
   bottom: 0;
   z-index: 9999;
-  opacity: 0;
+
   width: 100%;
   padding: 35px 58px 43px;
-  background-color: #eee;
+
+  background-color: #eeeeee;
+  opacity: 0;
+
   transition: opacity 0.3s;
 }
 .product__title {
   margin: 0 0 10px;
-  font-size: 18px;
+
   font-weight: bold;
+  font-size: 18px;
   line-height: 1.67;
-  text-transform: uppercase;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .product__title:hover,
@@ -1095,14 +1150,16 @@ img {
 
 .product__description {
   margin-bottom: 40px;
+
   font-size: 16px;
   line-height: 1.13;
   color: #666666;
 }
 
 .product__button {
-  background-color: #fb565a;
   width: 100%;
+
+  background-color: #fb565a;
 }
 
 .product__button:hover,
@@ -1111,8 +1168,8 @@ img {
 }
 
 .product__button:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .catalog__pagination .pagination {
@@ -1125,31 +1182,32 @@ img {
 }
 .pagination .pagination__link {
   display: block;
-  padding: 15px 18px;
   margin: 0 10px 0 0;
+  padding: 15px 18px;
 
-  font-size: 16px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  border: 3px solid #dbdbdb;
+
   background-color: #eeeeee;
+  border: 3px solid #dbdbdb;
 }
 
 .pagination__link:not(.active):hover,
 .pagination__link:not(.active):focus {
   background-color: #dfdfdf;
-
 }
 
 .pagination__link:not(.active):active {
   color: rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+
   background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .pagination__link.active {
-  background-color: #fff;
+  background-color: #ffffff;
   cursor: default;
 }
 
@@ -1161,19 +1219,19 @@ img {
 /* Стили попапа (начало) */
 .popup {
   position: fixed;
-  left: 50%;
   bottom: 180px;
-  transform: translateX(-50%);
+  left: 50%;
   z-index: 9999;
 
   display: none;
+  box-sizing: border-box;
   width: 100%;
   max-width: 960px;
   padding: 73px 100px;
 
-  box-sizing: border-box;
-  background-color: #fff;
-  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
+  transform: translateX(-50%);
 }
 .popup.active {
   display: block;
@@ -1182,8 +1240,9 @@ img {
 .popup__title {
   margin: 0;
   margin-bottom: 50px;
-  font-size: 45px;
+
   font-weight: 500;
+  font-size: 45px;
   line-height: 45px;
   color: #000000;
 }
@@ -1205,17 +1264,20 @@ img {
   width: 100%;
   max-width: 360px;
   margin-bottom: 12px;
+
   font-weight: bold;
   line-height: 18px;
   color: #000000;
 }
 .popup__imput {
+  box-sizing: border-box;
   width: 100%;
   max-width: 360px;
   margin-top: 12px;
   padding: 15px;
 
-  box-sizing: border-box;
+  font-weight: 400;
+
   border: solid 2px #d7dcde;
 }
 
@@ -1223,8 +1285,9 @@ img {
   width: 100%;
   height: 118px;
   margin-top: 12px;
-  padding: 15px;
   margin-bottom: 47px;
+  padding: 15px;
+
   border: solid 2px #d7dcde;
 
   resize: none;
@@ -1258,17 +1321,17 @@ img {
 }
 .popup__textarea:focus,
 .popup__imput:focus {
-  color: #000;
+  color: #000000;
 
-  outline: none;
   border: solid 2px #000000;
+  outline: none;
 }
 
 .popup__textarea:invalid,
 .popup__imput:invalid {
   color: #e74246;
 
+  background: #ffffff;
   border: solid 2px #e74246;
-  background: #fff;
 }
 /* Стили попапа (конец) */
