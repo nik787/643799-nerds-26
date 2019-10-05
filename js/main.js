@@ -1,32 +1,90 @@
-var popup = document.querySelector(".popup");
-var popupClose = document.querySelector(".popup .popup__close");
 var popupOpen = document.querySelector(".information__button");
-var popupInput = document.querySelectorAll(".popup__form input, textarea");
-var popupForm = document.querySelector(".popup__form");
-popupForm.addEventListener("submit", function(e) {
+var popup = document.querySelector(".popup");
+var popupClose = popup.querySelector(".popup__close");
+var popupInput = popup.querySelectorAll("input, textarea");
+var popupLogin = popup.querySelector("#name");
+var popupEmail = popup.querySelector("#email");
+var popupText = popup.querySelector("#text-area");
+var popupForm = popup.querySelector(".popup__form");
+var popupSubmit = popup.querySelector(".popup__submit");
+
+var isStorageSupport = true;
+var loginStorage = "";
+var emailStorage = "";
+
+try {
+  loginStorage = localStorage.getItem("login");
+  emailStorage = localStorage.getItem("email");
+} catch (error) {
+  isStorageSupport = false;
+}
+
+popupOpen.addEventListener("click", openPopup);
+popupClose.addEventListener("click", closePopup);
+popupForm.addEventListener("submit", valid);
+
+function valid(e) {
   for (let i = 0; i < popupInput.length; i++) {
     const element = popupInput[i];
     element.setAttribute("required", true);
     if(!element.validity.valid) {
+      popupError();
       e.preventDefault();
+      popupSubmit.addEventListener("click", function() {
+        if (!element.validity.valid) {
+          popupError();
+        }
+      })
+    } else if(isStorageSupport) {
+      localStorage.setItem("login", popupLogin.value);
+      localStorage.setItem("email", popupEmail.value);
     }
   }
-
-
-})
-
-
-
-popupOpen.addEventListener("click", openPopup);
-popupClose.addEventListener("click", closePopup);
+}
+function popupOpenAnimate() {
+  popup.classList.add("popup--open-animate");
+  setTimeout(() => {
+    popup.classList.remove("popup--open-animate");
+  }, 2000);
+}
+function popupError() {
+  popup.classList.add("popup--error");
+  setTimeout(() => {
+    popup.classList.remove("popup--error");
+  }, 2000);
+}
 function openPopup(e) {
-  event.preventDefault();
-  popup.classList.add("active");
+  e.preventDefault();
+  popup.classList.add("popup--open");
+  popupOpenAnimate();
+  if(loginStorage && emailStorage) {
+    popupText.focus();
+  } else if(loginStorage) {
+    popupEmail.focus();
+  } else {
+    popupLogin.focus();
+  }
+  popupLogin.value = loginStorage;
+  popupEmail.value = emailStorage;
+  window.addEventListener("keydown", function(e) {
+    if (e.keyCode === 27) {
+      if(popup.classList.contains("popup--open")) {
+        e.preventDefault();
+        closePopup(e);
+      }
+    }
+  });
 }
 function closePopup(e) {
-  event.preventDefault();
-  popup.classList.remove("active");
+  e.preventDefault();
+  popup.classList.add("popup--close");
+  setTimeout(() => {
+    popup.classList.remove("popup--open");
+  popup.classList.remove("popup--close");
+  }, 800);
+  popupOpen.focus();
 }
+
 
 ymaps.ready(function () {
   var myMap = new ymaps.Map("map", {
