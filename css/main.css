@@ -53,9 +53,9 @@ a {
 }
 
 img {
-  box-sizing: content-box;
+  /* box-sizing: content-box;
   width: 100%;
-  height: auto;
+  height: auto; */
 }
 
 
@@ -157,7 +157,7 @@ img {
 .nav {
   display: flex;
   align-items: center;
-  margin-top: 47px;
+  margin-top: 48px;
 }
 
 .nav__logo {
@@ -263,7 +263,6 @@ img {
   text-align: center;
 
   -webkit-transform: translateX(-50%);
-
           transform: translateX(-50%);
 }
 
@@ -305,7 +304,7 @@ img {
 
 .slide {
   display: none;
-  padding: 70px 0 80px 0;
+  padding: 69px 0 80px 0;
 }
 
 .slide--first {
@@ -358,7 +357,7 @@ img {
 .slide__title {
   max-width: 523px;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 
   font-weight: 500;
   font-size: 55px;
@@ -369,7 +368,7 @@ img {
 .slide__text {
   max-width: 430px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 }
 
 .slide__btn {
@@ -431,7 +430,7 @@ img {
 .advantage__text {
   width: 260px;
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 32px;
 }
 .advantage__button {
   width: 160px;
@@ -442,7 +441,7 @@ img {
 .studio {
   display: flex;
   justify-content: space-between;
-  padding-top: 38px;
+  padding-top: 40px;
   padding-bottom: 49px;
 
   border-bottom: 2px solid #efefef;
@@ -450,7 +449,7 @@ img {
 .about {
   flex-basis: 655px;
   width: 100%;
-  padding-top: 35px;
+  padding-top: 34px;
 }
 .about__slogan {
   margin: 0;
@@ -488,7 +487,7 @@ img {
 .about__item::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 0;
 
   display: block;
@@ -502,11 +501,11 @@ img {
   width: 100%;
 }
 .indicators__logo {
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 .indicators__title {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 
   font-weight: bold;
   text-align: center;
@@ -532,11 +531,13 @@ img {
   color: #000000;
 }
 .indicators__item .percent {
+  top: -0.57em;
+
   font-size: 26px;
 }
 .indicators__item span {
   display: block;
-  margin-top: 10px;
+  margin-top: 8px;
 
   font-weight: normal;
   font-size: 16px;
@@ -550,7 +551,7 @@ img {
   margin-bottom: 79px;
   padding: 0;
   padding-top: 45px;
-  padding-bottom: 26px;
+  padding-bottom: 37px;
 
   border-bottom: 2px solid #efefef;
 }
@@ -566,10 +567,26 @@ img {
 .partners__item {
   position: relative;
 
-  flex-basis: 210px;
-  box-sizing: content-box;
-  width: 100%;
+  width: 300px;
   padding: 0 40px;
+}
+.partners__item:nth-child(1) {
+  width: 281px;
+  padding-top: 11px;
+  padding-left: 31px;
+}
+.partners__item:nth-child(2) {
+  padding-top: 1px;
+  padding-left: 45px;
+}
+.partners__item:nth-child(3) {
+  padding-left: 57px;
+}
+.partners__item:nth-child(4n) {
+  width: 250px;
+  padding-top: 7px;
+  padding-right: 0;
+  padding-left: 63px;
 }
 .partners__item:not(:nth-child(4n))::after {
   content: "";
@@ -726,7 +743,7 @@ img {
 
 /* Стили страницы каталога (начало) */
 .catalog-page .header__title {
-  margin: 72px 0 105px;
+  margin: 71px 0 105px;
 
   font-weight: 500;
   font-size: 55px;
@@ -762,10 +779,10 @@ img {
 }
 
 .group.group--grid {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 .group.group--features {
-  margin-bottom: 49px;
+  margin-bottom: 46px;
 }
 
 .group__title {
@@ -983,8 +1000,8 @@ img {
   border-bottom: 4px solid #4d4d4d;
   box-shadow: 2px 0 0 0 white, inset -2px 0 0 0 white;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   -webkit-transform: rotate(45deg);
+          transform: translateY(-50%);
           transform: rotate(45deg);
   opacity: 0.4;
 }
@@ -1081,7 +1098,6 @@ img {
   margin-left: 18px;
 
   -webkit-transform: rotate(180deg);
-
           transform: rotate(180deg);
 }
 
@@ -1108,10 +1124,11 @@ img {
   text-align: center;
 }
 .product:hover .product__card,
-.product .product__card {
+.product:focus .product__card {
   opacity: 1;
 }
-.product:hover::before {
+.product:hover::before,
+.product:focus::before {
   opacity: 1;
 }
 .product__img {
@@ -1361,7 +1378,6 @@ img {
           animation-duration: 1s;
 
   -webkit-animation-fill-mode: both;
-
           animation-fill-mode: both;
 }
 .popup--close {
@@ -1371,7 +1387,6 @@ img {
           animation-duration: 1s;
 
   -webkit-animation-fill-mode: both;
-
           animation-fill-mode: both;
 }
 .popup--error {
@@ -1381,7 +1396,6 @@ img {
           animation-duration: 1s;
 
   -webkit-animation-fill-mode: both;
-
           animation-fill-mode: both;
 }
 
